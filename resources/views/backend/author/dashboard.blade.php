@@ -5,7 +5,7 @@
 @endpush
 @section('content')
 
-    <h2>Welcome Admin dashbord</h2>
+    <h2>Welcome {{ Auth::user()->name }} dashbord</h2>
     <div class="card-body">
         
         @if (session('status'))
