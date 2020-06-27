@@ -41,10 +41,10 @@ class RegisterController extends Controller
     {
         if(Auth::check() && Auth::user()->role->id == 1)
         {
-            $this->redirectTo = route('admin.dashboard');
+            $this->redirectTo = route('backend.admin.dashboard');
         }else
         {
-            $this->redirectTo = route('author.dashboard');
+            $this->redirectTo = route('backend.author.dashboard');
         }
         $this->middleware('guest');
     }

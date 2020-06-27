@@ -20,11 +20,11 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check() && Auth::user()->role->id == 1) 
         {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('backend.admin.dashboard');
 
         }elseif(Auth::guard($guard)->check() && Auth::user()->role->id == 2)
         {
-            return redirect()->route('author.dashboard');
+            return redirect()->route('backend.author.dashboard');
         }else{
             
             return $next($request);
