@@ -1,11 +1,11 @@
 @extends('backend.layout.app')
-@section('title', 'Dashbord')
+@section('title', 'Dashboard')
 @push('css')
 
 @endpush
 @section('content')
 
-    <h2>Welcome <strong>{{ Auth::user()->name }}</strong> dashbord</h2>
+    <h2>Welcome <strong>{{ Auth::user()->name }}</strong> dashboard</h2>
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
