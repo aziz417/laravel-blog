@@ -35,9 +35,9 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
                             </a>
                         </li>
-                        <li>
-                            <a  href="">
-                                <i class="fa fa-dashboard"></i> <span class="nav-label">Category</span>
+                        <li class="{{ Request::is('admin/tag*') ? 'active' : '' }}">
+                            <a  href="{{ route('backend.admin.tag.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Tages</span>
                             </a>
                         </li>
                     @endif

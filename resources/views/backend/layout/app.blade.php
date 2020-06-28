@@ -89,7 +89,7 @@
     <!-- Toastr -->
     <script src="{{ asset('backend/js/plugins/toastr/toastr.min.js')}}"></script>
 
-
+    {!! Toastr::message() !!}
     <script>
         $(document).ready(function() {
            
