@@ -45,12 +45,14 @@
                     <td><?php echo $tag->slug ?></td>
                     <td><?php echo $tag->created_at ?></td>
                     <td class="actionCenter">
-                        <a title="Edit" href="{{ route('backend.admin.tag.edit', $tag->id) }}" class="cus_mini_icon color-success"> <i class="fa fa-pencil-square-o"></i></a>
+                        <a title="Edit" href="{{ route('backend.admin.tag.edit', $tag->id) }}" class="cus_mini_icon color-success"> 
+                            <i class="fa fa-pencil-square-o"></i></a>
 
-                        <form action="{{ route('backend.admin.tag.destroy',$tag->id) }}" method="post">
+                        <button type="button" onclick="deleteItem({{ $tag->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
+
+                        <form id="delete-form-{{ $tag->id }}" style="display:hidden" action="{{ route('backend.admin.tag.destroy',$tag->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
                         </form>
                     </td>
                 </tr>
