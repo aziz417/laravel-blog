@@ -135,6 +135,19 @@ class CategoryController extends Controller
 
     public function destroy($id)
     {
+        $category = Category::find($id);
+        //old image delete for category
+        if(Storage::disk('public')->exists('category/'.$category->image)){
+            Storage::disk('public')->delete('category/'.$category->image);
+        }
+        //old image delete for slider
+        if(Storage::disk('public')->exists('category/slider/'.$category->image)){
+            Storage::disk('public')->delete('category/slider/'.$category->image);
+        }
 
+        if(Category::destroy($id)){
+            Toastr::success('Category delete successfully', 'Success', ["positionClass" => "toast-top-right"]);
+            return redirect()->back();
+        }
     }
 }
