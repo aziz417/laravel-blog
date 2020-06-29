@@ -40,6 +40,12 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Tages</span>
                             </a>
                         </li>
+
+                        <li class="{{ Request::is('admin/category*') ? 'active' : '' }}">
+                            <a  href="{{ route('backend.admin.category.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Categories</span>
+                            </a>
+                        </li>
                     @endif
 
                    <!--author menu list-->
