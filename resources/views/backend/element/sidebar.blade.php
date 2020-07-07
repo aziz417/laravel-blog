@@ -46,6 +46,12 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Categories</span>
                             </a>
                         </li>
+
+                        <li class="{{ Request::is('admin/post*') ? 'active' : '' }}">
+                            <a  href="{{ route('backend.admin.post.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Posts</span>
+                            </a>
+                        </li>
                     @endif
 
                    <!--author menu list-->

@@ -1,5 +1,5 @@
 @extends('backend.layout.app')
-@section('title', 'Tages')
+@section('title', 'Posts')
 @push('css')
     <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css" rel="stylesheet">
 @endpush
@@ -7,7 +7,7 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>All Tags <strong style="font-size:15px;">{{ $tages->count() }}</strong></h2>
+        <h2>All Posts <strong style="font-size:15px;">{{ $posts->count() }}</strong></h2>
         <ol class="breadcrumb">
             <li>
                 <a href="index.html">Home</a>
@@ -22,7 +22,7 @@
     </div>
     <div class="col-lg-2">
     <div class="ibox-tools">
-            <a href="{{ route('backend.admin.tag.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs" 
+            <a href="{{ route('backend.admin.post.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs" 
             type="submit"><i class="fa fa-plus"></i> <strong>Create</strong></a>
         </div>
     </div>
@@ -31,28 +31,38 @@
 <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Title</th>
+                <th>Author</th>
                 <th>Slug</th>
-                <th>Post Count</th>
+                <th>Image</th>
+                <th>Body</th>
+                <th>View Count</th>
+                <th>Status</th>
+                <th>Is Approved</th>
                 <th>Created At</th>
                 <th class="actionCenter">Action</th>
             </tr>
         </thead>
         <tbody>
       
-            @foreach($tages as $tag)
+            @foreach($posts as $post )
                 <tr>
-                    <td><?php echo $tag->name ?></td>
-                    <td><?php echo $tag->slug ?></td>
-                    <td>{{ $tag->posts->count() }}</td>
-                    <td><?php echo $tag->created_at ?></td>
+                    <td>{{ \Illuminate\Support\Str::limit($post->title, '10') }}</td>
+                    <td>{{ $post->user->name }}</td>
+                    <td>{{ \Illuminate\Support\Str::limit($post->slug, '10') }}</td>
+                    <td>{{ $post->image }}</td>
+                    <td>{{ \Illuminate\Support\Str::limit($post->body, '15') }}</td>
+                    <td>{{ $post->view_count }}</td>
+                    <td>{{ $post->status == 1 ? 'Published': 'Unpublished' }}</td>
+                    <td>{{ $post->is_approved == 1 ? 'Approved' : 'Pandaing' }}</td>
+                    <td>{{ $post->created_at }}</td>
                     <td class="actionCenter">
-                        <a title="Edit" href="{{ route('backend.admin.tag.edit', $tag->id) }}" class="cus_mini_icon color-success"> 
+                        <a title="Edit" href="{{ route('backend.admin.post.edit', $post->id) }}" class="cus_mini_icon color-success"> 
                             <i class="fa fa-pencil-square-o"></i></a>
 
-                        <button type="button" onclick="deleteItem({{ $tag->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
+                        <button type="button" onclick="deleteItem({{ $post->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
 
-                        <form id="delete-form-{{ $tag->id }}" style="display:hidden" action="{{ route('backend.admin.tag.destroy',$tag->id) }}" method="post">
+                        <form id="delete-form-{{ $post->id }}" style="display:hidden" action="{{ route('backend.admin.category.destroy', $post->id) }}" method="post">
                             @csrf
                             @method('delete')
                         </form>
@@ -64,9 +74,14 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
+                <th>Title</th>
+                <th>Author</th>
                 <th>Slug</th>
-                <th>Post Count</th>
+                <th>Image</th>
+                <th>Body</th>
+                <th>View Count</th>
+                <th>Status</th>
+                <th>Is Approved</th>
                 <th>Created At</th>
                 <th class="actionCenter">Action</th>
             </tr>

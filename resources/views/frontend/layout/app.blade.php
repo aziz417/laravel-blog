@@ -28,14 +28,14 @@
 
     <body>
 
-        @include('frontend.element.header');
+        @include('frontend.element.header')
 
-        
-    
-        @yield('content');
-    
-    
-        @include('frontend.element.footer');
+
+
+        @yield('content')
+
+
+        @include('frontend.element.footer')
 
 
 

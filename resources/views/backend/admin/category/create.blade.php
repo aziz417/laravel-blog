@@ -8,8 +8,8 @@
 <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-8">
             <ol class="breadcrumb">
-                <li>
-                    <a href="{{ route('backend.admin.category.index') }}"> Categories </a>
+                <li>category
+                    <a href="{{ route('backend.admin.category.index') }}"> Category </a>
                 </li>
                 <li class="active">
                     <strong>Create</strong>
@@ -24,7 +24,7 @@
                 <div class="ibox float-e-margins">
 
                     <div class="ibox-title">
-                        <h5>Create Category</h5>
+                        <h5>Create category</h5>
                     </div>
 
                     <div class="ibox-content">

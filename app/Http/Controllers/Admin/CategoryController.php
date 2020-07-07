@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Model\Category;
+use App\Model\Post;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -99,6 +100,7 @@ class CategoryController extends Controller
              //create category directory
                 Storage::disk('public')->makeDirectory('category');
             }
+            
             //old image delete for category
             if(Storage::disk('public')->exists('category/'.$category->image)){
                 Storage::disk('public')->delete('category/'.$category->image);

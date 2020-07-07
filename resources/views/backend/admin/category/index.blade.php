@@ -7,7 +7,7 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Basic Form</h2>
+        <h2>All Categories <strong style="font-size:15px;">{{ $categories->count() }}</strong></h2>
         <ol class="breadcrumb">
             <li>
                 <a href="index.html">Home</a>
@@ -34,6 +34,7 @@
                 <th>Name</th>
                 <th>Slug</th>
                 <th>Image</th>
+                <th>Post Count</th>
                 <th>Created At</th>
                 <th class="actionCenter">Action</th>
             </tr>
@@ -45,6 +46,7 @@
                     <td>{{  $category->name }}</td>
                     <td>{{  $category->slug }}</td>
                     <td>{{  $category->image }}</td>
+                    <td>{{  $category->posts->count() }}</td>
                     <td>{{  $category->created_at }}</td>
                     <td class="actionCenter">
                         <a title="Edit" href="{{ route('backend.admin.category.edit', $category->id) }}" class="cus_mini_icon color-success"> 
@@ -67,6 +69,7 @@
                 <th>Name</th>
                 <th>Slug</th>
                 <th>Image</th>
+                <th>Post Count</th>
                 <th>Created At</th>
                 <th class="actionCenter">Action</th>
             </tr>

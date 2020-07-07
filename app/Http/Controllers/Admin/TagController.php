@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use App\Model\Tag;
+use App\Model\Post;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 

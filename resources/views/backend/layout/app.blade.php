@@ -1,13 +1,5 @@
-<!--
-*
-*  INSPINIA - Responsive backend Theme
-*  version 2.7
-*
--->
-
 <!DOCTYPE html>
 <html>
-
 <head>
 
     <meta charset="utf-8">
@@ -36,19 +28,19 @@
 
 <body>
     <div id="wrapper">
-        
+
         @include('backend.element.sidebar')
 
         <div id="page-wrapper" class="gray-bg dashbard-1">
-       
+
             @include('backend.element.header')
-            
+
             @yield('content')
         </div>
         @include('backend.element.footer')
     </div>
 
-        
+
 
     <!-- Mainly scripts -->
     <script src="{{ asset('backend/js/jquery-3.1.1.min.js')}}"></script>
@@ -63,11 +55,11 @@
     <script src="{{ asset('backend/js/plugins/toastr/toastr.min.js')}}"></script>
 
     {!! Toastr::message() !!}
-    
+
     @stack('scripts')
     <!-- Sweet alert -->
     <script src="{{ asset('backend/js/plugins/sweetalert/sweetalert.min.js') }}"></script>
-        
+
     <script type="text/javascript">
 
         function deleteItem(id){
@@ -84,9 +76,9 @@
                 swal("Deleted!", "Your imaginary file has been deleted.", "success");
                 event.preventDefault();
                 document.getElementById('delete-form-'+id).submit();
-            }) 
+            })
         }
     </script>
-    
+
 </body>
-</html> 
+</html>

@@ -275,3 +275,6 @@ th.trash-table.sorting_desc::after {
     border-left: 4px solid #0048ff;
     background: #02174f;
 }
+.custom_width{
+    width: 359px!important;
+}
