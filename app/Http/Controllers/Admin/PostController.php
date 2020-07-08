@@ -23,7 +23,8 @@ class PostController extends Controller
      */
     public function index()
     {
-
+        /*$posts = Post::with('categories')->latest()->get();
+        dd($posts);*/
         $posts = Post::latest()->get();
 
         return view('backend.admin.post.index', compact('posts'));
@@ -48,22 +49,21 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Post $Post )
+    public function store(Request $request)
     {
-      
+
         $request->validate([
             'title'     => 'required',
             'body'      => 'required',
-            'tag'       => 'required',
-            'category'  => 'required',
-            'img'       => 'required|mimes:jpg,png,jpeg,bmp'
+            'tags'       => 'required',
+            'categories'  => 'required',
+            'img'       => 'required|image',
         ]);
-        
-        dd('hello');
-        
+
+
         $slug = Str::slug($request->title);
         $image = $request->file('img');
-        
+
 
         if(isset($image)){
             //current date
@@ -79,7 +79,7 @@ class PostController extends Controller
             //resize image for post
             $post = Image::make($image)->resize(1600, 1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$post);
- 
+
         }else{
             $imageName = 'default.png';
         }
@@ -95,39 +95,25 @@ class PostController extends Controller
            $request['status'] = false;
        }
 
-       $post->categories()->attach($request->categories);
-       $post->tags()->attach($request->posts);
+        $post = Post::create($request->all());
 
-       if(Post::create($request->all())){
-
+       if($post){
+        $post->categories()->attach($request->categories);
+        $post->tags()->attach($request->tags);
         Toastr::success('Post create successfully', 'Success', ["positionClass" => "toast-top-right"]);
 
         return redirect()->back();
-
        }
- 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function show(Post $post)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Post $post)
     {
-        //
+
     }
 
     /**
