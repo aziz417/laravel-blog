@@ -22,7 +22,7 @@
     </div>
     <div class="col-lg-2">
     <div class="ibox-tools">
-            <a href="{{ route('backend.admin.post.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs" 
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs"
             type="submit"><i class="fa fa-plus"></i> <strong>Create</strong></a>
         </div>
     </div>
@@ -40,11 +40,11 @@
                 <th>Status</th>
                 <th>Is Approved</th>
                 <th>Created At</th>
-                <th class="actionCenter">Action</th>
+                <th class="actionCenter action_custom_width">Action</th>
             </tr>
         </thead>
         <tbody>
-      
+
             @foreach($posts as $post )
                 <tr>
                     <td>{{ \Illuminate\Support\Str::limit($post->title, '10') }}</td>
@@ -57,12 +57,14 @@
                     <td>{{ $post->is_approved == 1 ? 'Approved' : 'Pandaing' }}</td>
                     <td>{{ $post->created_at }}</td>
                     <td class="actionCenter">
-                        <a title="Edit" href="{{ route('backend.admin.post.edit', $post->id) }}" class="cus_mini_icon color-success"> 
+                        <a title="Edit" href="{{ route('admin.posts.show', $post->id) }}" class="cus_mini_icon color-info">
+                            <i class="fa fa-eye"></i></a>
+                        <a title="Edit" href="{{ route('admin.posts.edit', $post->id) }}" class="cus_mini_icon color-success">
                             <i class="fa fa-pencil-square-o"></i></a>
 
                         <button type="button" onclick="deleteItem({{ $post->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
 
-                        <form id="delete-form-{{ $post->id }}" style="display:hidden" action="{{ route('backend.admin.category.destroy', $post->id) }}" method="post">
+                        <form id="delete-form-{{ $post->id }}" style="display:hidden" action="{{ route('admin.posts.destroy', $post->id) }}" method="post">
                             @csrf
                             @method('delete')
                         </form>
@@ -99,4 +101,3 @@
     </script>
 @endpush
 
-    

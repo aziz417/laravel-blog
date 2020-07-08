@@ -51,7 +51,6 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'title'     => 'required',
             'body'      => 'required',
@@ -60,10 +59,8 @@ class PostController extends Controller
             'img'       => 'required|image',
         ]);
 
-
         $slug = Str::slug($request->title);
         $image = $request->file('img');
-
 
         if(isset($image)){
             //current date
@@ -75,11 +72,9 @@ class PostController extends Controller
             if(!Storage::disk('public')->exists('post')){
                 Storage::disk('public')->makeDirectory('post');
             }
-
             //resize image for post
             $post = Image::make($image)->resize(1600, 1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$post);
-
         }else{
             $imageName = 'default.png';
         }
@@ -108,27 +103,73 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        //
+        return view('backend.admin.post.view', compact('post'));
     }
 
     public function edit(Post $post)
     {
+        $categories = Category::all();
+        $tags = Tag::all();
 
+        return view('backend.admin.post.edit', compact('post', 'categories', 'tags'));
     }
 
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title'     => 'required',
+            'body'      => 'required',
+            'tags'       => 'required',
+            'categories'  => 'required',
+            'img'       => 'image',
+        ]);
+
+        $slug = Str::slug($request->title);
+        $image = $request->file('img');
+
+        if(isset($image)){
+            //current date
+            $currentDate = Carbon::now()->toDateString();
+            //generate image name
+            $imageName = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
+
+            //check post directory exists
+            if(!Storage::disk('public')->exists('post')){
+                Storage::disk('public')->makeDirectory('post');
+            }
+            //resize image for post
+            $postImage = Image::make($image)->resize(1600, 1066)->stream();
+            Storage::disk('public')->put('post/'.$imageName,$postImage);
+            // delete old image
+            if(Storage::disk('public')->exists('post/'.$post->image)){
+                Storage::disk('public')->delete('post/'.$post->image);
+            }
+        }else{
+            $imageName = $post->image;
+        }
+
+        $request['user_id'] = Auth::id();
+        $request['slug']    = $slug;
+        $request['image']   = $imageName;
+        $request['is_approved'] = true;
+
+        if(isset($request->status)){
+            $request['status'] = true;
+        }else{
+            $request['status'] = false;
+        }
+
+        if( $post->update($request->all())){
+            $post->categories()->sync($request->categories);
+            $post->tags()->sync($request->tags);
+            Toastr::success('Post update successfully', 'Success', ["positionClass" => "toast-top-right"]);
+
+            return redirect()->back();
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Post $post)
     {
-        //
+
     }
 }

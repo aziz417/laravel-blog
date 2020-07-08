@@ -9,7 +9,7 @@
         <div class="col-lg-8">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('backend.admin.tag.index') }}">Tag</a>
+                    <a href="{{ route('admin.tags.index') }}">Tag</a>
                 </li>
                 <li class="active">
                     <strong>Edit</strong>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="ibox-content">
-                        <form class="form-horizontal" method="POST" action="{{ route('backend.admin.tag.update', $tag->id) }}">
+                        <form class="form-horizontal" method="POST" action="{{ route('admin.tags.update', $tag->id) }}">
                            @csrf
                            @method('PUT')
 
@@ -53,7 +53,6 @@
 @endsection
 
 @push('scripts')
-  
+
 @endpush
 
-    

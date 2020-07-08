@@ -13,7 +13,7 @@
                                 <li><a href="contacts.html">Contacts</a></li>
                                 <li><a href="mailbox.html">Mailbox</a></li>
                                 <li class="divider"></li>
-                                <li><a 
+                                <li><a
                                     onclick="
                                         event.preventDefault();
                                         document.getElementById('logout-form').submit();"
@@ -31,24 +31,24 @@
                     <!--admin menu list-->
                     @if(Request::is('admin*'))
                         <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
-                            <a href="{{ route('backend.admin.dashboard') }}">
+                            <a href="{{ route('admin.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
                             </a>
                         </li>
-                        <li class="{{ Request::is('admin/tag*') ? 'active' : '' }}">
-                            <a  href="{{ route('backend.admin.tag.index') }}">
+                        <li class="{{ Request::is('admin/tags*') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.tags.index') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Tages</span>
                             </a>
                         </li>
 
-                        <li class="{{ Request::is('admin/category*') ? 'active' : '' }}">
-                            <a  href="{{ route('backend.admin.category.index') }}">
+                        <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.categories.index') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Categories</span>
                             </a>
                         </li>
 
-                        <li class="{{ Request::is('admin/post*') ? 'active' : '' }}">
-                            <a  href="{{ route('backend.admin.post.index') }}">
+                        <li class="{{ Request::is('admin/posts*') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.posts.index') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Posts</span>
                             </a>
                         </li>
@@ -57,7 +57,7 @@
                    <!--author menu list-->
                     @if(Request::is('author*'))
                         <li class="{{ Request::is('author/dashboard') ? 'active' : '' }}">
-                            <a href="{{ route('backend.author.dashboard') }}">
+                            <a href="{{ route('author.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
                             </a>
                         </li>

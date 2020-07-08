@@ -9,7 +9,7 @@
         <div class="col-lg-8">
             <ol class="breadcrumb">
                 <li>category
-                    <a href="{{ route('backend.admin.category.index') }}"> Category </a>
+                    <a href="{{ route('admin.categories.index') }}"> Categories</a>
                 </li>
                 <li class="active">
                     <strong>Create</strong>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="ibox-content">
-                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('backend.admin.category.store') }}">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('admin.categories.store') }}">
                            @csrf
 
                            @include(' backend.admin.category.element');
@@ -52,7 +52,6 @@
 @endsection
 
 @push('scripts')
-  
+
 @endpush
 
-    

@@ -1,5 +1,5 @@
 @extends('backend.layout.app')
-@section('title', '  ')
+@section('title', 'Post Edit')
 @push('css')
 
 @endpush
@@ -9,7 +9,7 @@
         <div class="col-lg-8">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('  ') }}">  </a>
+                    <a href="{{ route('admin.posts.index') }}">  </a>
                 </li>
                 <li class="active">
                     <strong>Edit</strong>
@@ -28,21 +28,19 @@
                     </div>
 
                     <div class="ibox-content">
-                        <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="{{ route(' ',) }}">
+                        <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="{{ route('admin.posts.update', $post->id) }}">
                            @csrf
                            @method('PUT')
-
-                           @include('')
+                           @include('backend.admin.post.element')
 
                             <div class="form-group">
-                                <div class="col-sm-4"></div>
                                 <div class="col-sm-8">
                                     <button class="btn btn-primary pull-left" type="submit">
                                         <strong>Update</strong>
                                      </button>
                                 </div>
+                                <div class="col-sm-4"></div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -53,7 +51,6 @@
 @endsection
 
 @push('scripts')
-  
+
 @endpush
 
-    

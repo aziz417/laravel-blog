@@ -20,13 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::group(['as' => 'backend.admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
+Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::resource('tag', 'TagController');
-    Route::resource('category', 'CategoryController');
-    Route::resource('post', 'PostController');
+    Route::resource('tags', 'TagController');
+    Route::resource('categories', 'CategoryController');
+    Route::resource('posts', 'PostController');
 });
 
-Route::group(['as' => 'backend.author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' =>['auth', 'author']], function () {
+Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' =>['auth', 'author']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 });

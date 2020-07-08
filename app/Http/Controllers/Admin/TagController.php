@@ -43,13 +43,13 @@ class TagController extends Controller
         $request->validate([
             'name' => 'required',
         ]);
-        
+
         $request['slug'] = Str::slug($request->name);
         Tag::create($request->all());
         Toastr::success('Tag create successfully',
          'Success', ["positionClass" => "toast-top-right"]);
         return redirect()->back();
-        
+
     }
 
     /**
@@ -91,7 +91,7 @@ class TagController extends Controller
         $tag->update($request->all());
         Toastr::success('Tag update successfully',
          'Success', ["positionClass" => "toast-top-right"]);
-         return redirect()->route('backend.admin.tag.index');
+         return redirect()->route('admin.tags.index');
     }
 
     /**

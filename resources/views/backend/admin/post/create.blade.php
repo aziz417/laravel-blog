@@ -7,7 +7,7 @@
         <div class="col-lg-8">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('backend.admin.post.index') }}">Post</a>
+                    <a href="{{ route('admin.posts.index') }}">Post</a>
                 </li>
                 <li class="active">
                     <strong>Create</strong>
@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="ibox-content">
-                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('backend.admin.post.store') }}">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('admin.posts.store') }}">
                            @csrf
 
                            @include('backend.admin.post.element')
@@ -50,4 +50,3 @@
 
 
 
-    

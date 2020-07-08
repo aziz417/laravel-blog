@@ -22,7 +22,7 @@
     </div>
     <div class="col-lg-2">
     <div class="ibox-tools">
-            <a href="{{ route('backend.admin.category.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs" 
+            <a href="{{ route('admin.categories.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs"
             type="submit"><i class="fa fa-plus"></i> <strong>Create</strong></a>
         </div>
     </div>
@@ -40,7 +40,7 @@
             </tr>
         </thead>
         <tbody>
-      
+
             @foreach($categories as $category )
                 <tr>
                     <td>{{  $category->name }}</td>
@@ -49,12 +49,12 @@
                     <td>{{  $category->posts->count() }}</td>
                     <td>{{  $category->created_at }}</td>
                     <td class="actionCenter">
-                        <a title="Edit" href="{{ route('backend.admin.category.edit', $category->id) }}" class="cus_mini_icon color-success"> 
+                        <a title="Edit" href="{{ route('admin.categories.edit', $category->id) }}" class="cus_mini_icon color-success">
                             <i class="fa fa-pencil-square-o"></i></a>
 
                         <button type="button" onclick="deleteItem({{ $category->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
 
-                        <form id="delete-form-{{ $category->id }}" style="display:hidden" action="{{ route('backend.admin.category.destroy', $category->id) }}" method="post">
+                        <form id="delete-form-{{ $category->id }}" style="display:hidden" action="{{ route('admin.categories.destroy', $category->id) }}" method="post">
                             @csrf
                             @method('delete')
                         </form>
@@ -87,4 +87,3 @@
     </script>
 @endpush
 
-    

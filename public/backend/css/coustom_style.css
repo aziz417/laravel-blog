@@ -1,9 +1,12 @@
 html, body{
-    
+
     color: #000!important;
 }
 .actionCenter {
     text-align: center;
+}
+.action_custom_width{
+    width: 70px!important;
 }
 
 .action_btn {
@@ -265,9 +268,9 @@ th.trash-table.sorting_desc::after {
 .nav-header-custom a {
     color: #DFE4ED;
 }
-.nav > li > a, .text-muted {
+/*.nav > li > a, .text-muted {
     color: white;
-}
+}*/
 .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
     background-color: #02174f!important;
 }

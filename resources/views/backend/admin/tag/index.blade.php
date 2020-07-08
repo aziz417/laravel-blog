@@ -22,7 +22,7 @@
     </div>
     <div class="col-lg-2">
     <div class="ibox-tools">
-            <a href="{{ route('backend.admin.tag.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs" 
+            <a href="{{ route('admin.tags.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs"
             type="submit"><i class="fa fa-plus"></i> <strong>Create</strong></a>
         </div>
     </div>
@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-      
+
             @foreach($tages as $tag)
                 <tr>
                     <td><?php echo $tag->name ?></td>
@@ -47,12 +47,12 @@
                     <td>{{ $tag->posts->count() }}</td>
                     <td><?php echo $tag->created_at ?></td>
                     <td class="actionCenter">
-                        <a title="Edit" href="{{ route('backend.admin.tag.edit', $tag->id) }}" class="cus_mini_icon color-success"> 
+                        <a title="Edit" href="{{ route('admin.tags.edit', $tag->id) }}" class="cus_mini_icon color-success">
                             <i class="fa fa-pencil-square-o"></i></a>
 
                         <button type="button" onclick="deleteItem({{ $tag->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
 
-                        <form id="delete-form-{{ $tag->id }}" style="display:hidden" action="{{ route('backend.admin.tag.destroy',$tag->id) }}" method="post">
+                        <form id="delete-form-{{ $tag->id }}" style="display:hidden" action="{{ route('admin.tags.destroy',$tag->id) }}" method="post">
                             @csrf
                             @method('delete')
                         </form>
@@ -84,4 +84,3 @@
     </script>
 @endpush
 
-    

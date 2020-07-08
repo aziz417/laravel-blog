@@ -28,7 +28,7 @@
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label>Status</label>
-                        <input name="status" value="1" type="checkbox" class="i-checks">
+                        <input name="status" @if(isset($post) && $post->status == true) checked @endif value="1" type="checkbox" class="i-checks">
                         @error('status') <span class="help-block m-b-none text-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
@@ -49,7 +49,14 @@
                     <select class="selectpicker show-tick custom_width" name="categories[]"  multiple data-live-search="true"
                      title="Choose category..." data-selected-text-format="count > 6" data-actions-box="true" data-size="5">
                        @foreach ($categories as $category)
-                       <option data-content="<span class='badge badge-info'>{{ $category->name }} </span>" value="{{ $category->id }}"></option>
+                       <option
+                           @if(isset($post))
+                               @foreach($post->categories as $postCategory)
+                                    {{ $postCategory->id == $category->id ? 'selected' : '' }}
+                               @endforeach
+                           @endif
+                           data-content="<span class='badge badge-info'>{{ $category->name }} </span>" value="{{ $category->id }}">
+                       </option>
                        @endforeach
                     </select>
                 </div>
@@ -59,7 +66,13 @@
                     <select class="selectpicker show-tick custom_width" name="tags[]"  multiple data-live-search="true"
                     title="Choose tag..." data-selected-text-format="count > 6" data-actions-box="true" data-size="5">
                        @foreach ($tags as $tag)
-                           <option data-content="<span class='badge badge-info'>{{ $tag->name }} </span>" value="{{ $tag->id }}"></option>
+                           <option
+                               @if(isset($post))
+                                   @foreach($post->tags as $postTag)
+                                        {{ $postTag->id == $tag->id ? 'selected' : '' }}
+                                   @endforeach
+                               @endif
+                               data-content="<span class='badge badge-info'>{{ $tag->name }} </span>" value="{{ $tag->id }}"></option>
                        @endforeach
                     </select>
                 </div>

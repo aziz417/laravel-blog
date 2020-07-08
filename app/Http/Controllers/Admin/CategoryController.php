@@ -100,7 +100,7 @@ class CategoryController extends Controller
              //create category directory
                 Storage::disk('public')->makeDirectory('category');
             }
-            
+
             //old image delete for category
             if(Storage::disk('public')->exists('category/'.$category->image)){
                 Storage::disk('public')->delete('category/'.$category->image);
@@ -131,7 +131,7 @@ class CategoryController extends Controller
         if($category->update($request->all())) {
             Toastr::success('Category update successfully',
                 'Success', ["positionClass" => "toast-top-right"]);
-            return redirect()->route('backend.admin.category.index');
+            return redirect()->route('admin.categories.index');
         }
     }
 
