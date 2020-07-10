@@ -25,8 +25,13 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::resource('tags', 'TagController');
     Route::resource('categories', 'CategoryController');
     Route::resource('posts', 'PostController');
+
+    Route::put('/post/{id}/approve', 'PostController@approve')->name('post.approve');
+    Route::get('pending/post', 'PostController@pending')->name('post.pending');
 });
 
 Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' =>['auth', 'author']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::resource('posts', 'PostController');
+
 });

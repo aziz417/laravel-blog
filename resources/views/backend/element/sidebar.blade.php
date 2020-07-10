@@ -52,6 +52,12 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Posts</span>
                             </a>
                         </li>
+
+                        <li class="{{ Request::is('admin/pending/post') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.post.pending') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Pending Post</span>
+                            </a>
+                        </li>
                     @endif
 
                    <!--author menu list-->
@@ -59,6 +65,12 @@
                         <li class="{{ Request::is('author/dashboard') ? 'active' : '' }}">
                             <a href="{{ route('author.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="{{ Request::is('author/posts*') ? 'active' : '' }}">
+                            <a  href="{{ route('author.posts.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Posts</span>
                             </a>
                         </li>
                     @endif

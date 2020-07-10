@@ -23,8 +23,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        /*$posts = Post::with('categories')->latest()->get();
-        dd($posts);*/
+
         $posts = Post::latest()->get();
 
         return view('backend.admin.post.index', compact('posts'));
@@ -114,6 +113,19 @@ class PostController extends Controller
         return view('backend.admin.post.edit', compact('post', 'categories', 'tags'));
     }
 
+    public function pending(){
+        $posts = Post::where('is_approved', false)->latest()->get();
+        return view('backend.admin.post.pending', compact('posts'));
+    }
+
+    public function approve($id){
+        $post = Post::find($id);
+        $post['is_approved'] = true;
+
+        $post->save();
+        return redirect()->back();
+    }
+
     public function update(Request $request, Post $post)
     {
         $request->validate([
@@ -180,4 +192,5 @@ class PostController extends Controller
         Toastr::success('Post delete successfully', 'Success', ["positionClass" => "toast-top-right"]);
         return redirect()->back();
     }
+
 }
