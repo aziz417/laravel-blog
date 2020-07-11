@@ -101,7 +101,6 @@
             $('#example').DataTable();
         } );
 
-
             function approved(id){
                 swal({
                     title: "Are you sure approved this post?",
@@ -118,7 +117,5 @@
                     document.getElementById('approved-'+id).submit();
                 })
             }
-
     </script>
 @endpush
-
