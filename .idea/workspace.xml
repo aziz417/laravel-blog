@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="post parmison done">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/post/pending.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/post/pending.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +186,7 @@
       <workItem from="1594172389216" duration="23399000" />
       <workItem from="1594258544560" duration="3675000" />
       <workItem from="1594344327434" duration="14675000" />
-      <workItem from="1594436837172" duration="3620000" />
+      <workItem from="1594436837172" duration="4804000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -273,14 +273,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="post parmison done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1594481995780" />
+    <state x="313" y="118" key="MultipleFileMergeDialog" timestamp="1594481997755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="313" y="118" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1594481997755" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1594122155875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594122155875" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594381870033">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594481876046">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594381870033" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594481876046" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594371526327">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
