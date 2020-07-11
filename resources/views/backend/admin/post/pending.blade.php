@@ -101,6 +101,10 @@
             $('#example').DataTable();
         } );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
             function approved(id){
                 swal({
                     title: "Are you sure approved this post?",
@@ -117,5 +121,12 @@
                     document.getElementById('approved-'+id).submit();
                 })
             }
+<<<<<<< HEAD
     </script>
 @endpush
+=======
+
+    </script>
+@endpush
+
+>>>>>>> origin/master
