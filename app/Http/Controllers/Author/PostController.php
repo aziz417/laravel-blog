@@ -75,6 +75,7 @@ class PostController extends Controller
         }
 
         $post = Post::create($request->all());
+        //message send to each of admin
         $users = User::where('role_id', 1)->get();
         Notification::send($users, new AuthorNewPost($post));
 

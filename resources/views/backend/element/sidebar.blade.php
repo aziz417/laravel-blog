@@ -59,7 +59,7 @@
                             </a>
                         </li>
 
-                        <li class="{{ Request::is('admin/subscriber*') ? 'active' : '' }}">
+                        <li class="{{ Request::is('admin/subscriber/index') ? 'active' : '' }}">
                             <a  href="{{ route('admin.subscriber.index') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Subscribers</span>
                             </a>

@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Model\Post;
 use App\Model\Category;
+use App\Model\Subscriber;
 use App\Model\Tag;
+use App\Notifications\AdminApprovePost;
+use App\Notifications\SubescriberNotify;
 use Carbon\Carbon;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
@@ -13,6 +16,8 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Notification;
+
 
 class PostController extends Controller
 {
@@ -90,6 +95,11 @@ class PostController extends Controller
        }
 
         $post = Post::create($request->all());
+       //email send every subscriber
+       $subescribers = Subscriber::all();
+       foreach($subescribers as $subscriber){
+           Notification::route('mail',$subscriber->email)->notify(new SubescriberNotify($post));
+       }
 
        if($post){
         $post->categories()->attach($request->categories);
@@ -123,6 +133,14 @@ class PostController extends Controller
         $post['is_approved'] = true;
 
         $post->save();
+        //email send every subscriber
+        $subescribers = Subscriber::all();
+        foreach($subescribers as $subscriber){
+            Notification::route('mail',$subscriber->email)->notify(new SubescriberNotify($post));
+        }
+        $post->user->notify(new AdminApprovePost($post));
+        Toastr::success('Post approved successfully', 'Success', ["positionClass" => "toast-top-right"]);
+
         return redirect()->back();
     }
 
