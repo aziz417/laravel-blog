@@ -5,9 +5,12 @@ use App\Http\Controllers\Controller;
 use App\Model\Post;
 use App\Model\Category;
 use App\Model\Tag;
+use App\Notifications\AuthorNewPost;
 use Carbon\Carbon;
+use App\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
@@ -72,6 +75,8 @@ class PostController extends Controller
         }
 
         $post = Post::create($request->all());
+        $users = User::where('role_id', 1)->get();
+        Notification::send($users, new AuthorNewPost($post));
 
         if($post){
             $post->categories()->attach($request->categories);

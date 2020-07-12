@@ -19,19 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="post parmison done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubscriberController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Subscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_12_014544_create_subscribers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/custom_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/subscribe.blade.php" afterDir="false" />
+    <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="subscribe store and view delete done">
+      <change afterPath="$PROJECT_DIR$/app/Notifications/AuthorNewPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/SuscribController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/SubscriberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/post/pending.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/post/pending.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +192,7 @@
       <workItem from="1594258544560" duration="3675000" />
       <workItem from="1594344327434" duration="14675000" />
       <workItem from="1594436837172" duration="5906000" />
-      <workItem from="1594517910227" duration="6731000" />
+      <workItem from="1594517910227" duration="15701000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -265,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594483560439</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="subscribe store and view delete done">
+      <created>1594528063430</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1594528063513</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +291,8 @@
     <MESSAGE value="some route change" />
     <MESSAGE value="approve done" />
     <MESSAGE value="post parmison done" />
-    <option name="LAST_COMMIT_MESSAGE" value="post parmison done" />
+    <MESSAGE value="subscribe store and view delete done" />
+    <option name="LAST_COMMIT_MESSAGE" value="subscribe store and view delete done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594523139732">
@@ -311,10 +311,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594122155875" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594483569113">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594528071904">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594483569113" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594528071904" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594371526327">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
