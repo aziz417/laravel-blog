@@ -1,5 +1,5 @@
 <footer>
-    
+
 	<div class="container">
 		<div class="row">
 
@@ -41,10 +41,12 @@
 
 					<h4 class="title"><b>SUBSCRIBE</b></h4>
 					<div class="input-area">
-						<form>
-							<input class="email-input" type="text" placeholder="Enter your email">
+						<form action="{{ route('subscribe.store') }}" method="Post">
+                            @csrf
+                            @error('email') <span class="help-block m-b-none text-danger">{{ $message }}</span> @enderror
+                            <input class="email-input" type="email" name="email" placeholder="Enter your email">
 							<button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i></button>
-						</form>
+                        </form>
 					</div>
 
 				</div><!-- footer-section -->

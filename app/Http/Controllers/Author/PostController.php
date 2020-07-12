@@ -33,11 +33,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'     => 'required',
-            'body'      => 'required',
+            'title'      => 'required',
+            'body'       => 'required',
             'tags'       => 'required',
-            'categories'  => 'required',
-            'img'       => 'required|image',
+            'categories' => 'required',
+            'img'        => 'required|image',
         ]);
 
         $slug = Str::slug($request->title);
@@ -108,11 +108,11 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $request->validate([
-            'title'     => 'required',
-            'body'      => 'required',
+            'title'      => 'required',
+            'body'       => 'required',
             'tags'       => 'required',
-            'categories'  => 'required',
-            'img'       => 'image',
+            'categories' => 'required',
+            'img'        => 'image',
         ]);
 
         $slug = Str::slug($request->title);

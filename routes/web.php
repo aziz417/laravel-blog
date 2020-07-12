@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//subscribe route here
+Route::POST('Subscriber', 'Frontend\SubscriberController@store')->name('subscribe.store');
+
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
@@ -28,6 +31,10 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
 
     Route::put('/post/{id}/approve', 'PostController@approve')->name('post.approve');
     Route::get('pending/post', 'PostController@pending')->name('post.pending');
+
+    //subscribe index route here
+    Route::get('Subscriber.index', 'SubscriberController@index')->name('subscriber.index');
+    Route::DELETE('Subscriber.destroy/{id}', 'SubscriberController@destroy')->name('subscriber.destroy');
 });
 
 Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' =>['auth', 'author']], function () {

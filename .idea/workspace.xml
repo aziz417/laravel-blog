@@ -20,7 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="post parmison done">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubscriberController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Subscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_12_014544_create_subscribers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/css/custom_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/subscribe.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/SuscribController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/SubscriberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +160,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/author" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -166,6 +178,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\admin" />
       <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\author" />
     </key>
   </component>
@@ -186,7 +199,8 @@
       <workItem from="1594172389216" duration="23399000" />
       <workItem from="1594258544560" duration="3675000" />
       <workItem from="1594344327434" duration="14675000" />
-      <workItem from="1594436837172" duration="4804000" />
+      <workItem from="1594436837172" duration="5906000" />
+      <workItem from="1594517910227" duration="6731000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -244,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594481832762</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="post parmison done">
+      <created>1594483560439</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594483560439</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +284,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="post create done" />
     <MESSAGE value="all route change" />
     <MESSAGE value="post delete done" />
@@ -273,6 +295,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="post parmison done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594523139732">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594523139732" />
     <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -285,10 +311,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594122155875" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594481876046">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594483569113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594481876046" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594483569113" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594371526327">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
