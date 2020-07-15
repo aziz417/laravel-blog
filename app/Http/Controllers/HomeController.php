@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Category;
+use App\Model\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,10 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -23,6 +22,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //dd(config('customConfig.full_name'));
+        $categories = Category::latest()->take(10)->get();
+        $posts = Post::latest()->take(10)->get();
+
+        return view('frontend.welcome', compact('categories','posts'));
+
     }
 }

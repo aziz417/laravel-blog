@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class AdminApprovePost extends Notification
+class AdminApprovePost extends Notification implements ShouldQueue
 {
     use Queueable;
     public $post;

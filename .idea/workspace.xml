@@ -19,13 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="author new post create message send done">
-      <change afterPath="$PROJECT_DIR$/app/Notifications/AdminApprovePost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/SubescriberNotify.php" afterDir="false" />
+    <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/FavoriteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/customConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_15_094447_create_post_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/AdminApprovePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/AdminApprovePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/AuthorNewPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/AuthorNewPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/SubescriberNotify.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/SubescriberNotify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/toastr.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/toastr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,13 +48,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PHPCSFixerBlackList">
-    <option name="filePaths">
-      <list>
-        <option value="$PROJECT_DIR$/database/migrations/2020_07_12_175801_create_jobs_table.php" />
-      </list>
-    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -166,7 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,10 +178,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp56\htdocs\laravel-blog\config" />
       <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\admin" />
       <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\author" />
     </key>
@@ -202,7 +205,12 @@
       <workItem from="1594258544560" duration="3675000" />
       <workItem from="1594344327434" duration="14675000" />
       <workItem from="1594436837172" duration="5906000" />
-      <workItem from="1594517910227" duration="22137000" />
+      <workItem from="1594517910227" duration="23027000" />
+      <workItem from="1594604546766" duration="16098000" />
+      <workItem from="1594649633722" duration="1654000" />
+      <workItem from="1594713550116" duration="589000" />
+      <workItem from="1594738350227" duration="592000" />
+      <workItem from="1594802720755" duration="16498000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -281,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594569956861</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="message send to every subscriber when a new post create admin and approve post">
+      <created>1594577996880</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594577996880</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,17 +325,18 @@
     <MESSAGE value="post parmison done" />
     <MESSAGE value="subscribe store and view delete done" />
     <MESSAGE value="author new post create message send done" />
-    <option name="LAST_COMMIT_MESSAGE" value="author new post create message send done" />
+    <MESSAGE value="message send to every subscriber when a new post create admin and approve post" />
+    <option name="LAST_COMMIT_MESSAGE" value="message send to every subscriber when a new post create admin and approve post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files" timestamp="1594576779009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files/0.0.1366.728@0.0.1366.728" timestamp="1594576779009" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594523139732">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594820421137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594523139732" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594820421137" />
     <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,17 +345,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="118" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1594481997755" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1594122155875">
+    <state x="505" y="71" key="NewPhpClassDialog" timestamp="1594610080597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594122155875" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594569960521">
+    <state x="505" y="71" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1594610080597" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1594650035209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594569960521" />
-    <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594371526327">
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594578003746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1594371526327" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594578003746" />
+    <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594612761635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1594612761635" />
   </component>
 </project>

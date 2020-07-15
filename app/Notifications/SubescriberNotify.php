@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class SubescriberNotify extends Notification
+class SubescriberNotify extends Notification implements ShouldQueue
 {
     use Queueable;
     public $post;
@@ -42,7 +42,7 @@ class SubescriberNotify extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->greeting('Hello, Subescriber !')
+            ->greeting('Hello, Subscriber !')
             ->subject('New Post Available')
             ->line('There is a new post. We hope you will like it !')
             ->line('Post Title: '.$this->post->title)

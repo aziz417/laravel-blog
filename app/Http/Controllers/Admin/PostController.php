@@ -28,15 +28,13 @@ class PostController extends Controller
      */
     public function index()
     {
-
         $posts = Post::latest()->get();
 
         return view('backend.admin.post.index', compact('posts'));
     }
 
-    /**
+    /*
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function create()
