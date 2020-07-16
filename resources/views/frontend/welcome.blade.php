@@ -51,13 +51,13 @@
                     <div class="card h-100">
                         <div class="single-post post-style-1">
 
-                            <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/').$post->image }}" alt="Blog Image"></div>
+                            <div class="blog-image"><a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}"><img src="{{ Storage::disk('public')->url('post/').$post->image }}" alt="Blog Image"></a></div>
 
                             <a class="avatar" href="#"><img src="{{ asset('frontend/images/icons8-team-355979.jpg') }}" alt="Profile Image"></a>
 
                             <div class="blog-info">
 
-                                <h4 class="title"><a href="#"><b>{{ $post->title }}</b></a></h4>
+                                <a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}"> <h4 class="title"><b>{{ $post->title }}</b></h4></a>
 
                                 <ul class="post-footer">
                                     <li>

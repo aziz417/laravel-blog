@@ -8,18 +8,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
 
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         //dd(config('customConfig.full_name'));
@@ -28,5 +17,12 @@ class HomeController extends Controller
 
         return view('frontend.welcome', compact('categories','posts'));
 
+    }
+
+    public function details($id){
+
+        $post = Post::where('id', $id)->first();
+        $randomPosts = Post::all()->random(3);
+        return view('frontend.page.postDetails', compact('post', 'randomPosts'));
     }
 }

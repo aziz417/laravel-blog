@@ -1,5 +1,5 @@
 @extends('backend.layout.app')
-@section('title', 'Posts')
+@section('title', 'Favorite Posts')
 @push('css')
     <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css" rel="stylesheet">
 @endpush
@@ -7,7 +7,7 @@
 
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Favorite Posts <strong style="font-size:15px;">{{ $posts->count() }}</strong></h2>
+            <h2>Favorites Posts <strong style="font-size:15px;">{{ $posts->count() }}</strong></h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="index.html">Home</a>
@@ -23,7 +23,7 @@
         <div class="col-lg-2">
             <div class="ibox-tools">
                 <a href="{{ route('admin.posts.create') }}" class="btn btn-sm btn-primary pull-right m-t-n-xs"
-                   type="submit"><i class="fa fa-plus"></i> <strong>Create</strong></a>
+                   type="submit"><i class="fa fa-plus"></i> <strong>Post Create</strong></a>
             </div>
         </div>
     </div>
@@ -45,9 +45,17 @@
                 <td>{{ \Illuminate\Support\Str::limit($post->title, '10') }}</td>
                 <td>{{ $post->user->name }}</td>
                 <td>{{ $post->view_count }}</td>
-                <td>{{ $post->favorite_to_users }}</td>
+                <td>{{ $post->favorite_to_users->count() }}</td>
                 <td class="actionCenter">
+                    <a title="Edit" href="{{ route('author.favorite.show', $post->id) }}" class="cus_mini_icon color-info">
+                        <i class="fa fa-eye"></i></a>
 
+                    <button type="button" onclick="favoriteRemove({{ $post->id }})" class="cus_mini_icon color-danger"><i class="fa fa-trash "></i></button>
+
+                    <form id="favoriteRemove-{{ $post->id }}" style="display:hidden" action="{{ route('author.favorite.destroy', $post->id) }}" method="post">
+                        @csrf
+                        @method('put')
+                     </form>
                 </td>
             </tr>
         @endforeach
@@ -74,20 +82,20 @@
             $('#example').DataTable();
         } );
 
-            function approved(id){
+            function favoriteRemove(id){
                 swal({
-                    title: "Are you sure approved this post?",
+                    title: "Are you sure approved this post remove to favorite list?",
                     text: "You will not be able to recover this post!",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: "Yes, Approved it!",
+                    confirmButtonText: "Yes, Remove it!",
                     closeOnConfirm: false
                 }, function () {
                     swal("Changed!", "Your imaginary file has been change.", "success");
                     event.preventDefault();
-                    document.getElementById('approved-'+id).submit();
+                    document.getElementById('favoriteRemove-'+id).submit();
                 })
             }
 

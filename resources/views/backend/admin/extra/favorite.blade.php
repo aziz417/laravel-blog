@@ -90,7 +90,7 @@
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: "Yes, Approved it!",
+                    confirmButtonText: "Yes, Remove it!",
                     closeOnConfirm: false
                 }, function () {
                     swal("Changed!", "Your imaginary file has been change.", "success");
