@@ -53,6 +53,12 @@
                             </a>
                         </li>
 
+                        <li class="{{ Request::is('admin/favorite*') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.favorites.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Favorite Posts</span>
+                            </a>
+                        </li>
+
                         <li class="{{ Request::is('admin/pending/post') ? 'active' : '' }}">
                             <a  href="{{ route('admin.post.pending') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Pending Post</span>
@@ -77,6 +83,12 @@
                         <li class="{{ Request::is('author/posts*') ? 'active' : '' }}">
                             <a  href="{{ route('author.posts.index') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Posts</span>
+                            </a>
+                        </li>
+
+                        <li class="{{ Request::is('author/favorite*') ? 'active' : '' }}">
+                            <a  href="{{ route('author.favorites.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Favorite Posts</span>
                             </a>
                         </li>
                     @endif

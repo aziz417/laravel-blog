@@ -32,6 +32,12 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::put('/post/{id}/approve', 'PostController@approve')->name('post.approve');
     Route::get('pending/post', 'PostController@pending')->name('post.pending');
 
+    //favorite post all route here
+    Route::get('favorite/posts', 'ExtraController@index')->name('favorites.index');
+    Route::get('favorite/post/{post}/show', 'ExtraController@show')->name('favorite.show');
+    Route::put('favorite/post/{post}/destroy', 'ExtraController@destroy')->name('favorite.destroy');
+
+
     //subscribe index route here
     Route::get('subscriber/index', 'SubscriberController@index')->name('subscriber.index');
     Route::DELETE('subscriber/destroy/{id}', 'SubscriberController@destroy')->name('subscriber.destroy');
@@ -40,5 +46,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
 Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' =>['auth', 'author']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('posts', 'PostController');
+    Route::get('favorite/posts', 'ExtraController@index')->name('favorites.index');
+
 
 });
