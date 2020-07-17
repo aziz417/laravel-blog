@@ -34,7 +34,7 @@
                             <div class="post-info">
 
                                 <div class="left-area">
-                                    <a class="avatar" href="#"><img src="{{ asset('frontend/images/avatar-1-120x120.jpg')}}" alt="Profile Image"></a>
+                                    <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/').$post->user->image}}" alt="Profile Image"></a>
                                 </div>
 
                                 <div class="middle-area">
@@ -127,7 +127,7 @@
 
                                 <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/').$randomPost->image }}" alt="Blog Image"></div>
 
-                                <a class="avatar" href="#"><img src="images/icons8-team-355979.jpg" alt="Profile Image"></a>
+                                <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/').$post->user->image }}" alt="Profile Image"></a>
 
                                 <div class="blog-info">
 
