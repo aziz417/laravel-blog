@@ -20,19 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/profile/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/profile/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/author/extra/favoritePostView.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExtraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExtraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/ExtraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/ExtraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/extra/favorite.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/extra/favorite.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/author/extra/favorite.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/author/extra/favorite.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +205,8 @@
       <workItem from="1594713550116" duration="589000" />
       <workItem from="1594738350227" duration="592000" />
       <workItem from="1594802720755" duration="33832000" />
-      <workItem from="1594897382491" duration="11019000" />
+      <workItem from="1594897382491" duration="11300000" />
+      <workItem from="1594949559661" duration="12367000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -312,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594868213678</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="post details complete">
+      <created>1594917009118</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1594917009142</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +345,8 @@
     <MESSAGE value="message send to every subscriber when a new post create admin and approve post" />
     <MESSAGE value="favorite post add successfully" />
     <MESSAGE value="admin favorite list show view and delete done" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin favorite list show view and delete done" />
+    <MESSAGE value="post details complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="post details complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="570" y="200" key="#Notifications" timestamp="1594897498841">
@@ -355,10 +357,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files/0.0.1366.728@0.0.1366.728" timestamp="1594576779009" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594871197967">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594964761206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594871197967" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594964761206" />
     <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -375,10 +377,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594868219863">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594917056377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594868219863" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594917056377" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594612761635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

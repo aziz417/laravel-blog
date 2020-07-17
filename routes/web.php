@@ -46,6 +46,8 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::DELETE('subscriber/destroy/{id}', 'SubscriberController@destroy')->name('subscriber.destroy');
 
     // admin controller here
+    Route::get('edit', 'AdminController@edit')->name('admin.edit');
+    Route::PUT('admin/update/{user}', 'AdminController@update')->name('admin.update');
 
 
 });

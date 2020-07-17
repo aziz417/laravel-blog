@@ -8,13 +8,13 @@
 
 @section('content')
 <div class="slider display-table center-text">
-    <h1 class="title display-table-cell"><b>RegIster</b></h1>
+    <h1 class="title display-table-cell"><b>Register</b></h1>
 </div><!-- slider -->
 
 <section class="blog-area section">
     <div class="container">
 
-        
+
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
