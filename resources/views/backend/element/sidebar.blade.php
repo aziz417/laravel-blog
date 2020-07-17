@@ -12,7 +12,7 @@
                                 @if(Auth::id() == 1)
                                     <li><a href="{{ route('admin.admin.edit') }}">Admin Profile</a></li>
                                 @else
-                                    <li><a href="profile.html">Author Profile</a></li>
+                                    <li><a href="{{ route('author.author.edit') }}">Author Profile</a></li>
                                 @endif
                                 <li><a href="contacts.html">Contacts</a></li>
                                 <li><a href="mailbox.html">Mailbox</a></li>

@@ -61,5 +61,9 @@ Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 
     Route::get('favorite/post/{post}/show', 'ExtraController@show')->name('favorite.show');
     Route::put('favorite/post/{post}/destroy', 'ExtraController@destroy')->name('favorite.destroy');
 
+    // author controller here
+    Route::get('edit', 'AuthorController@edit')->name('author.edit');
+    Route::PUT('author/update/{user}', 'AuthorController@update')->name('author.update');
+
 
 });
