@@ -7,6 +7,7 @@ use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
@@ -25,8 +26,13 @@ class AuthorController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
+
+        if(!empty($request->password)){
+            $request->validate([
+                'password' => ['required', 'string', 'min:8', 'confirmed']
+            ]);
+        }
 
         $name = Str::slug($request->name);
         $image = $request->file('img');
@@ -58,6 +64,7 @@ class AuthorController extends Controller
             $request['role_id'] = 2;
             $request['username'] = "Author";
         }
+        $request['password'] = Hash::make($request->password);
         $request['image'] = $imageName;
         $user->update($request->all());
         Toastr::success('Profile update successfully', 'Success', ["positionClass" => "toast-top-right"]);

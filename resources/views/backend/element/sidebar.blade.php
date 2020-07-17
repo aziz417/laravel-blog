@@ -3,13 +3,13 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="{{ asset('backend/img/profile_small.jpg')}}" />
+                            <img alt="image" style="width: 60px; height: 50px" class="img-circle" src="{{ Storage::disk('public')->url('profile/').Auth::user()->image }}" />
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ Auth::user()->name }}</strong>
                              </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                @if(Auth::id() == 1)
+                                @if(Auth::user()->role_id == 1)
                                     <li><a href="{{ route('admin.admin.edit') }}">Admin Profile</a></li>
                                 @else
                                     <li><a href="{{ route('author.author.edit') }}">Author Profile</a></li>
