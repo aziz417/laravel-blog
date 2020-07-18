@@ -9,7 +9,7 @@
         <div class="col-lg-8">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('backend.admin.tag.index') }}">Tag</a>
+                    <a href="{{ route('admin.tags.index') }}">Tag</a>
                 </li>
                 <li class="active">
                     <strong>Create</strong>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="ibox-content">
-                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('backend.admin.tag.index') }}">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ route('admin.tags.store') }}">
                            @csrf
 
                            @include('backend.admin.tag.element')
@@ -52,7 +52,6 @@
 @endsection
 
 @push('scripts')
-  
+
 @endpush
 
-    

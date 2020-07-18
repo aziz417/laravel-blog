@@ -14,17 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-
 Auth::routes();
 
 //subscribe route here
 Route::POST('Subscriber', 'Frontend\SubscriberController@store')->name('subscribe.store');
 Route::group(['middleware' => ['auth']], function (){
     Route::post('favorite/{post}/add', 'Frontend\FavoriteController@add')->name('post.favorite');
+    Route::post('comment/{post}/store', 'CommentController@store')->name('comment.store');
+
+    //comments backend comment route
+    Route::get('comment/all', 'CommentController@index')->name('comment.index');
 });
 
 //post details routes here
 Route::get('post/details/{id}/{slug}', 'HomeController@details')->name('post.details');
+//All posts route here
+Route::get('all/posts', 'HomeController@allPost')->name('all.posts');
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 

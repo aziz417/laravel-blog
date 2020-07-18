@@ -20,12 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/css/posts/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/css/posts/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/allPost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_17_070631_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_17_091734_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/tag/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/tag/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +168,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/author" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend/css/posts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,11 +182,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\css\posts" />
       <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\author" />
       <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\js" />
       <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\js\home" />
       <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\css\profile" />
-      <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\admin\extra" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -205,7 +214,8 @@
       <workItem from="1594738350227" duration="592000" />
       <workItem from="1594802720755" duration="33832000" />
       <workItem from="1594897382491" duration="11300000" />
-      <workItem from="1594949559661" duration="23114000" />
+      <workItem from="1594949559661" duration="26477000" />
+      <workItem from="1595036933038" duration="17683000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -333,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594975857372</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="post view count">
+      <created>1594981622193</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1594981622193</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +386,8 @@
     <MESSAGE value="admin profile update complete" />
     <MESSAGE value="author profile update complete" />
     <MESSAGE value="admin and author password change done" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin and author password change done" />
+    <MESSAGE value="post view count" />
+    <option name="LAST_COMMIT_MESSAGE" value="post view count" />
   </component>
   <component name="WindowStateProjectService">
     <state x="570" y="200" key="#Notifications" timestamp="1594897498841">
@@ -380,10 +398,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files/0.0.1366.728@0.0.1366.728" timestamp="1594576779009" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594968920330">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595083187680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594968920330" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595083187680" />
     <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -400,10 +418,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594975859675">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1594981628114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594975859675" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594981628114" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594612761635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

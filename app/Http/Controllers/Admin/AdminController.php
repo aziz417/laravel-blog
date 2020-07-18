@@ -22,6 +22,7 @@ class AdminController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $user = Auth::user()->findOrFail($id);
 
         $request->validate([
@@ -32,6 +33,9 @@ class AdminController extends Controller
             $request->validate([
                 'password' => ['required', 'string', 'min:8', 'confirmed']
             ]);
+            $request['password'] = Hash::make($request->password);
+        }else{
+            $request['password'] = $user->password;
         }
 
         $name = Str::slug($request->name);
@@ -64,7 +68,6 @@ class AdminController extends Controller
             $request['role_id'] = 2;
             $request['username'] = "Author";
         }
-        $request['password'] = Hash::make($request->password);
         $request['image'] = $imageName;
         $user->update($request->all());
         Toastr::success('Profile update successfully', 'Success', ["positionClass" => "toast-top-right"]);

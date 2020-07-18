@@ -29,8 +29,11 @@ class HomeController extends Controller
             $post->increment('view_count');
             Session::put($blogKey);
         }
-
         $randomPosts = Post::all()->random(3);
         return view('frontend.page.postDetails', compact('post', 'randomPosts'));
+    }
+    public function allPost(){
+        $posts = Post::latest()->paginate(9);
+        return view('frontend.page.allPost', compact('posts'));
     }
 }

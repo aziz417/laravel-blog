@@ -7,8 +7,8 @@
 
 		<ul class="main-menu visible-on-click" id="main-menu">
 			<li><a href="{{ route('home') }}">Home</a></li>
+			<li><a href="{{ route('all.posts') }}">All Posts</a></li>
 			<li><a href="#">Categories</a></li>
-			<li><a href="#">Features</a></li>
 			<li><a href="{{ route('login') }}">Login</a></li>
 			<li><a href="{{ route('register') }}">Register</a></li>
 		</ul><!-- main-menu -->

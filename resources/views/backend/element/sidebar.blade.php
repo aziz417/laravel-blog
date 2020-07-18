@@ -96,7 +96,11 @@
                             </a>
                         </li>
                     @endif
-
+                    <li class="{{ Request::is('comment*') ? 'active' : '' }}">
+                        <a  href="{{ route('comment.index') }}">
+                            <i class="fa fa-dashboard"></i> <span class="nav-label">Comments</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
