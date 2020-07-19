@@ -81,3 +81,8 @@ Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 
     Route::get('comment/all', 'ExtraController@commentIndex')->name('comment.index');
     Route::DELETE('comment/{comment}/destroy', 'ExtraController@commentDestroy')->name('comment.destroy');
 });
+
+View::composer('frontend/element/footer', function ($view){
+    $categories = App\Model\Category::all();
+    $view->with('categories', $categories);
+});
