@@ -1,5 +1,5 @@
 @extends('frontend.layout.app')
-@section('title', 'All Posts')
+@section('title', 'Category Posts')
 @push('css')
     <link href="{{ asset('frontend/css/posts/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/posts/styles.css') }}" rel="stylesheet">
@@ -7,19 +7,25 @@
         .favorite_post{
             color:blue;
         }
+        .slider {
+            height: 400px;
+            width: 100%;
+            background-image: url({{ Storage::disk('public')->url('category/').$category->image }});
+            background-size: cover;
+        }
     </style>
 @endpush
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>Posts</b></h1>
+        <h1 class="title display-table-cell"><b>{{ $category->name }}</b></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
         <div class="container">
 
             <div class="row">
-                @foreach($posts as $post)
+                @foreach($category->posts as $post)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
                             <div class="single-post post-style-1">
@@ -65,7 +71,7 @@
                 @endforeach
             </div><!-- row -->
 
-            {{ $posts->links() }}
+           {{-- {{ $posts->links() }}--}}
 
         </div><!-- container -->
     </section><!-- section -->

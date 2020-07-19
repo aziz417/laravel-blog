@@ -44,7 +44,7 @@
 
                             </div><!-- post-info -->
 
-                            <p class="para">{{ $post->body }}</p>
+                            <p class="para">{!!  $post->body !!}</p>
 
                         </div><!-- post-top-area -->
 
@@ -59,7 +59,7 @@
                                 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>--}}
                             <ul class="tags">
                                 @foreach($post->tags as $tag)
-                                    <li><a href="#">{{ $tag->name }}</a></li>
+                                    <li><a href="{{ route('tag.post', [ 'tag' => $tag->slug, 'id' =>$tag->id ] ) }}">{{ $tag->name }}</a></li>
                                 @endforeach
                             </ul>
 
@@ -85,7 +85,7 @@
                                                 <i class="ion-heart"></i>{{ $post->favorite_to_users->count() }}</a>
                                         @endguest
                                     </li>
-                                    <li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+                                    <li><a href="#"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
                                     <li><a href="#"><i class="ion-eye"></i>{{ $post->view_count }}</a></li>
                                 </ul>
 
@@ -101,7 +101,7 @@
 
                                 <ul class="tags">
                                     @foreach($post->categories as $category)
-                                        <li><a href="#">{{ $category->name }}</a></li>
+                                        <li><a href="{{ route('category.post', [ 'category' => $category->slug, 'id' =>$category->id ] ) }}">{{ $category->name }}</a></li>
                                     @endforeach
                                 </ul>
 
@@ -154,7 +154,7 @@
                                                     <i class="ion-heart"></i>{{ $randomPost->favorite_to_users->count() }}</a>
                                             @endguest
                                         </li>
-                                        <li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+                                        <li><a href="#"><i class="ion-chatbubble"></i>{{ $randomPost->comments->count() }}</a></li>
                                         <li><a href="#"><i class="ion-eye"></i>{{ $randomPost->view_count }}</a></li>
                                     </ul>
 
@@ -182,7 +182,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
 									<textarea name="comment" rows="2" class="text-area-messge form-control"
-                                              placeholder="Enter your comment" aria-required="true" aria-invalid="false"></textarea >
+                                              placeholder="Enter your comment" aria-required="true" aria-invalid="false"></textarea>
+                                    @error('comment')<span style="color: red">{{ $message }}</span>@enderror
                                 </div><!-- col-sm-12 -->
                                 <div class="col-sm-12">
                                     <button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>
