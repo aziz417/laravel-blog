@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Category;
+use App\Model\Tag;
 use App\Model\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -35,5 +36,15 @@ class HomeController extends Controller
     public function allPost(){
         $posts = Post::latest()->paginate(9);
         return view('frontend.page.allPost', compact('posts'));
+    }
+
+    public function categoryPosts($slug, $id){
+        $category =Tag::where('id', $id)->first();
+        return view('frontend.page.categoryPosts', compact('category'));
+    }
+
+    public function tagPosts($slug, $id){
+        $tag =Tag::where('id', $id)->first();
+        return view('frontend.page.tagPosts', compact('tag'));
     }
 }
