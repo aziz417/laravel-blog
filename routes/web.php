@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 //subscribe route here
@@ -21,15 +22,18 @@ Route::POST('Subscriber', 'Frontend\SubscriberController@store')->name('subscrib
 Route::group(['middleware' => ['auth']], function (){
     Route::post('favorite/{post}/add', 'Frontend\FavoriteController@add')->name('post.favorite');
     Route::post('comment/{post}/store', 'CommentController@store')->name('comment.store');
-
-    //comments backend comment route
-    Route::get('comment/all', 'CommentController@index')->name('comment.index');
 });
 
 //post details routes here
 Route::get('post/details/{id}/{slug}', 'HomeController@details')->name('post.details');
 //All posts route here
 Route::get('all/posts', 'HomeController@allPost')->name('all.posts');
+
+//post show by category
+Route::get('category/{category}/{id}/posts', 'HomeController@categoryPosts')->name('category.post');
+
+//post show by tag
+Route::get('tag/{tag}/{id}/posts', 'HomeController@tagPosts')->name('tag.post');
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 
@@ -54,6 +58,9 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::get('edit', 'AdminController@edit')->name('admin.edit');
     Route::PUT('admin/update/{user}', 'AdminController@update')->name('admin.update');
 
+    //comments backend comment route
+    Route::get('comment/all', 'ExtraController@commentIndex')->name('comment.index');
+    Route::DELETE('comment/{comment}/destroy', 'ExtraController@commentDestroy')->name('comment.destroy');
 
 });
 
@@ -70,5 +77,7 @@ Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 
     Route::get('edit', 'AuthorController@edit')->name('author.edit');
     Route::PUT('author/update/{user}', 'AuthorController@update')->name('author.update');
 
-
+    //comments backend comment route
+    Route::get('comment/all', 'ExtraController@commentIndex')->name('comment.index');
+    Route::DELETE('comment/{comment}/destroy', 'ExtraController@commentDestroy')->name('comment.destroy');
 });

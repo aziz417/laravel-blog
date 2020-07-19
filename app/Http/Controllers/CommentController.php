@@ -23,10 +23,4 @@ class CommentController extends Controller
         return redirect()->back();
     }
 
-    public function index(){
-        $user = Auth::id();
-        $posts = Post::where('user_id', $user)->get();
-        return view('');
-
-    }
 }

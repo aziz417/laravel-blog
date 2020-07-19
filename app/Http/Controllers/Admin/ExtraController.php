@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\Comment;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
@@ -25,6 +26,17 @@ class ExtraController extends Controller
         Auth::user()->favorite_posts()->detach($id);
         Toastr::success('Your this post remove to favorite list is successfully', 'Success', ["positionClass" => "toast-top-right"]);
         return redirect()->route('admin.favorites.index');
+    }
+
+    public function commentIndex(){
+        $comments = Comment::orderBy('id', 'DESC')->get();
+        return view('backend.comment.index', compact('comments'));
+    }
+
+    public function commentDestroy($id){
+        Comment::findOrFail($id)->delete();
+        Toastr::success('Comment delete successfully', 'Success', ["positionClass" => "toast-top-right"]);
+        return redirect()->back();
 
     }
 }

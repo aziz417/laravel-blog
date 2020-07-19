@@ -74,6 +74,11 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Subscribers</span>
                             </a>
                         </li>
+                        <li class="{{ Request::is('admin/comment/all') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.comment.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Comments</span>
+                            </a>
+                        </li>
                     @endif
 
                    <!--author menu list-->
@@ -95,12 +100,12 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Favorite Posts</span>
                             </a>
                         </li>
+                        <li class="{{ Request::is('author/comment/all') ? 'active' : '' }}">
+                            <a  href="{{ route('author.comment.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Comments</span>
+                            </a>
+                        </li>
                     @endif
-                    <li class="{{ Request::is('comment*') ? 'active' : '' }}">
-                        <a  href="{{ route('comment.index') }}">
-                            <i class="fa fa-dashboard"></i> <span class="nav-label">Comments</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
