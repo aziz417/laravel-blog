@@ -13,14 +13,14 @@
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>{{ $tag->name }}<small class="circle" style="font-size: 15px">{{ $tag->posts->count() }}</small></b></h1>
+        <h1 class="title display-table-cell"><b>{{ $tag->name }}</b></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
         <div class="container">
 
             <div class="row">
-                @foreach($tag->posts as $post)
+                @foreach($posts as $post)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
                             <div class="single-post post-style-1">

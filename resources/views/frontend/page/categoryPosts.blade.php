@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="row">
-                @foreach($category->posts as $post)
+                @foreach($posts as $post)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
                             <div class="single-post post-style-1">
