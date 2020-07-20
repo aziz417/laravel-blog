@@ -35,6 +35,9 @@ Route::get('category/{category}/{id}/posts', 'HomeController@categoryPosts')->na
 //post show by tag
 Route::get('tag/{tag}/{id}/posts', 'HomeController@tagPosts')->name('tag.post');
 
+//search post show
+Route::get('search', 'HomeController@search')->name('search');
+
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
@@ -61,6 +64,10 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     //comments backend comment route
     Route::get('comment/all', 'ExtraController@commentIndex')->name('comment.index');
     Route::DELETE('comment/{comment}/destroy', 'ExtraController@commentDestroy')->name('comment.destroy');
+
+    //author route
+    Route::get('author/index', 'ExtraController@AuthorIndex')->name('author.index');
+    Route::DELETE('author/{author}/destroy', 'ExtraController@AuthorDestroy')->name('author.destroy');
 
 });
 

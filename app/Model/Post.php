@@ -4,6 +4,10 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static status()
+ * @method static where(string $string, $id)
+ */
 class Post extends Model
 {
     protected $fillable = ['user_id', 'title', 'slug', 'image', 'body', 'view_count', 'status', 'is_approved'];

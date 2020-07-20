@@ -14,9 +14,9 @@
 		</ul><!-- main-menu -->
 
 		<div class="src-area">
-			<form>
-				<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
-				<input class="src-input" type="text" placeholder="Type of search">
+			<form action=" {{ route('search') }} " method="get">
+				<button class="src-btn"  type="submit"><i class="ion-ios-search-strong"></i></button>
+				<input class="src-input" value="{{ isset($key) ? $key: '' }}" name="search" type="text" placeholder="Type of search">
 			</form>
 		</div>
 

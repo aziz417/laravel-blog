@@ -3,6 +3,8 @@
 @push('css')
     <link href="{{ asset('frontend/css/profile/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/profile/styles.css') }}" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="{{ asset('backend/css/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
     <style>
         .favorite_post{
             color:blue;
@@ -186,7 +188,11 @@
                                     @error('comment')<span style="color: red">{{ $message }}</span>@enderror
                                 </div><!-- col-sm-12 -->
                                 <div class="col-sm-12">
-                                    <button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>
+                                    @if(Auth::check())
+                                        <button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>
+                                    @else
+                                        <span class="submit-btn" id="myHref"><b>POST COMMENT</b></span>
+                                    @endif
                                 </div><!-- col-sm-12 -->
 
                             </div><!-- row -->
@@ -215,7 +221,6 @@
                                     <div class="right-area">
                                         <h5 class="reply-btn" ><a href="#"><b>REPLY</b></a></h5>
                                     </div>
-
                                 </div><!-- post-info -->
 
                                 <p>{{ $comment->comment }}</p>
@@ -233,6 +238,24 @@
 @endsection
 
 @push('js')
+    <script src="{{ asset('backend/js/plugins/sweetalert/sweetalert.min.js') }}"></script>
     <link href="{{ asset('frontend/js/scripts.js') }}" rel="stylesheet">
+    <script>
+        $("#myHref").on('click', function (){
+                swal({
+                    title: "If you want to Comment ?",
+                    text: "You will be first login!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: "Yes Login!",
+                    closeOnConfirm: false
+                }, function () {
+                    window.location = "{{ route('login') }}";
+                })
+        });
+    </script>
+
 @endpush
 

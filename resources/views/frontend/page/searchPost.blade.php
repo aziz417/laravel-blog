@@ -1,5 +1,5 @@
 @extends('frontend.layout.app')
-@section('title', 'All Posts')
+@section('title', 'Posts Posts')
 @push('css')
     <link href="{{ asset('frontend/css/posts/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/posts/styles.css') }}" rel="stylesheet">
@@ -12,11 +12,11 @@
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>Posts</b></h1>
+        <h1 class="title display-table-cell"><b>Your search {{ $key.' result '.$posts->count() }} </b></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
-        @if($posts->count > 0)
+         @if($posts->count() > 0)
             <div class="container">
 
                 <div class="row">
@@ -70,11 +70,11 @@
 
             </div><!-- container -->
         @else
-            <div class="row">
-                <div class="col-sm-12">
-                    <span class="text-center">No post found (:</span>
-                </div>
-            </div>
+             <div class="row">
+                 <div class="col-sm-12">
+                     <span class="text-center">No post found (:</span>
+                 </div>
+             </div>
         @endif
     </section><!-- section -->
 @endsection

@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         //dd(config('customConfig.full_name'));
         $categories = Category::latest()->take(10)->get();
-        $posts = Post::status()->approved()->take(10)->get();
+        $posts = Post::status()->approved()->orderBy('id', 'DESC')->paginate(10);
 
         return view('frontend.welcome', compact('categories','posts'));
     }
@@ -34,6 +34,7 @@ class HomeController extends Controller
 
         return view('frontend.page.postDetails', compact('post', 'randomPosts'));
     }
+
     public function allPost(){
         $posts = Post::status()->approved()->orderBy('id', 'DESC')->paginate(9);
         return view('frontend.page.allPost', compact('posts'));
@@ -41,13 +42,19 @@ class HomeController extends Controller
 
     public function categoryPosts($slug, $id){
         $category =Category::where('id', $id)->first();
-        $posts = $category->posts()->status()->approved()->get();
+        $posts = $category->posts()->status()->approved()->paginate(8);
         return view('frontend.page.categoryPosts', compact('posts', 'category'));
     }
 
     public function tagPosts($slug, $id){
         $tag =Tag::where('id', $id)->first();
-        $posts = $tag->posts()->status()->approved()->get();
+        $posts = $tag->posts()->status()->approved()->paginate(8);
         return view('frontend.page.tagPosts', compact('posts', 'tag' ));
+    }
+
+    public function search(Request $request){
+        $key = $request->search;
+        $posts = Post::where('title', 'like', "%$key%")->approved()->status()->paginate(8);
+        return view('frontend.page.searchPost', compact('posts', 'key'));
     }
 }
