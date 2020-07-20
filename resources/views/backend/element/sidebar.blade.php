@@ -79,6 +79,11 @@
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Comments</span>
                             </a>
                         </li>
+                        <li class="{{ Request::is('admin/author*') ? 'active' : '' }}">
+                            <a  href="{{ route('admin.author.index') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Authors</span>
+                            </a>
+                        </li>
                     @endif
 
                    <!--author menu list-->

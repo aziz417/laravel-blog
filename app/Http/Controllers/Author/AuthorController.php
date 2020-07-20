@@ -65,7 +65,7 @@ class AuthorController extends Controller
             $request['username'] = "Admin";
         }else{
             $request['role_id'] = 2;
-            $request['username'] = "Author";
+            $request['username'] = "Author".' '.$request->name;
         }
         $request['image'] = $imageName;
         $user->update($request->all());

@@ -20,12 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/author/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/searchPost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExtraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExtraController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_30_100512_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_30_100512_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/allPost.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/allPost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/categoryPosts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/categoryPosts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/tagPosts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/tagPosts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +219,8 @@
       <workItem from="1594949559661" duration="26477000" />
       <workItem from="1595036933038" duration="18478000" />
       <workItem from="1595119724808" duration="17812000" />
-      <workItem from="1595161882858" duration="12392000" />
+      <workItem from="1595161882858" duration="12675000" />
+      <workItem from="1595209230892" duration="23377000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -379,7 +390,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595171564307</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="some logical problem fix">
+      <created>1595182111257</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1595182111257</updated>
+    </task>
+    <task id="LOCAL-00026" summary="footer category shoe using composer">
+      <created>1595182172421</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1595182172421</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +446,9 @@
     <MESSAGE value="show comment by author complete" />
     <MESSAGE value="post view by category" />
     <MESSAGE value="post show by tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="post show by tag" />
+    <MESSAGE value="some logical problem fix" />
+    <MESSAGE value="footer category shoe using composer" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer category shoe using composer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="570" y="200" key="#Notifications" timestamp="1594897498841">
@@ -452,10 +479,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1595171567735">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1595182175060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595171567735" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595182175060" />
     <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594612761635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
