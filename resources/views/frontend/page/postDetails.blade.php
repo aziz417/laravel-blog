@@ -1,8 +1,8 @@
 @extends('frontend.layout.app')
 @section('title', 'Post Details')
 @push('css')
-    <link href="{{ asset('frontend/css/profile/responsive.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/profile/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/postDetails/responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/postDetails/styles.css') }}" rel="stylesheet">
     <!-- Sweet Alert -->
     <link href="{{ asset('backend/css/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
     <style>

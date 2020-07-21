@@ -38,6 +38,9 @@ Route::get('tag/{tag}/{id}/posts', 'HomeController@tagPosts')->name('tag.post');
 //search post show
 Route::get('search', 'HomeController@search')->name('search');
 
+//author profile route here
+Route::get('author/profile/{slug}/{id}', 'HomeController@authorPosts')->name('author.profile');
+
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');

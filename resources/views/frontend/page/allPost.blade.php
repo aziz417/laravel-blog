@@ -16,7 +16,7 @@
     </div><!-- slider -->
 
     <section class="blog-area section">
-        @if($posts->count > 0)
+        @if($posts->count() > 0)
             <div class="container">
 
                 <div class="row">

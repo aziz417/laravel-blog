@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use App\Model\Tag;
+use App\User;
 use App\Model\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
@@ -56,5 +58,13 @@ class HomeController extends Controller
         $key = $request->search;
         $posts = Post::where('title', 'like', "%$key%")->approved()->status()->paginate(8);
         return view('frontend.page.searchPost', compact('posts', 'key'));
+    }
+
+    // this controller return author info and all post of author
+    public function authorPosts($slug, $id){
+        $author = User::where('id', $id)->first();
+        $posts = $author->posts()->approved()->status()->orderBy('id', 'DESC')->paginate(1);
+
+        return view('frontend.page.authorProfile', compact('author', 'posts'));
     }
 }

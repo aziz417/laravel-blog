@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Model\Comment;
+use App\User;
 use App\Model\Post;
 use Illuminate\Support\Facades\Auth;
 use Brian2694\Toastr\Facades\Toastr;
@@ -43,7 +44,7 @@ class ExtraController extends Controller
     }
 
     public function AuthorIndex(){
-        $authors = Auth::user()->all();
+        $authors = User::orderBy('id', 'DESC')->get();
         return view('backend.admin.author.index', compact('authors'));
     }
 

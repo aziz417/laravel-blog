@@ -33,18 +33,22 @@
 
 	header .src-area{ width: 30%; }
 
+	
+	/* ---------------------------------
+	6. MAIN POST
+	--------------------------------- */
+
+	.main-post .post-top-area,
+	.main-post .post-bottom-area{ margin: 30px; }
 
 	/* ---------------------------------
-	6. MAIN POST ( LEF AREA )
+	7. SIDEBAR AREA
 	--------------------------------- */
 	
-	.main-post{ border-right: 0px ; }
+	.info-area{ padding: 30px 0; }
 	
-	.main-post .blog-post-inner,
-	.main-post .post-icons-area{ padding-right: 0px; }
-	
-	
-	
+	.info-area .sidebar-area,
+	.info-area .tag-area{ padding-left: 0px; }
 
 	
 }
@@ -66,6 +70,8 @@
 	h4{ font-size: 1.5em; }
 	h5{ font-size: 1.2em; }
 	
+	
+	
 	/* ---------------------------------
 	2. COMMONS FOR PAGE DESIGN
 	--------------------------------- */
@@ -77,8 +83,7 @@
 	/* ---------------------------------
 	3. MENU
 	--------------------------------- */
-	
-	
+
 	header .main-menu{ display: none; float: none; clear: both; border-top: 1px solid #ccc; }
 	
 	header .main-menu > li{ display: block; float: none; border-bottom: 1px solid #ddd; }
@@ -101,14 +106,12 @@
 	
 	
 	/* ---------------------------------
-	6. EXTRA BIG BLOG
+	4. SLIDER
 	--------------------------------- */
-	
-	.post-style-2 .blog-image{ width: 100%; height: auto; float: none; }
-	
-	.post-style-2 .blog-info{ height: auto; width: 100%; }
-	
-	
+
+	.slider{ height: 400px; width: 100%; background-image: url(../../images/category-1.jpg); background-size: cover; }  
+
+
 	/* ---------------------------------
 	10. FOOTER
 	--------------------------------- */
