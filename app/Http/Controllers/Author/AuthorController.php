@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Author;
 use App\Http\Controllers\Controller;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
+use App\Model\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -14,6 +15,23 @@ use Intervention\Image\Facades\Image;
 
 class AuthorController extends Controller
 {
+    public function dashboard(){
+        $user = Auth::user();
+        $posts = $user->posts();
+
+        $popular_posts = $posts
+            ->withCount('comments')
+            ->withCount('favorite_to_users')
+            ->orderBy('view_count', 'desc')
+            ->orderBy('comments_count', 'desc')
+            ->orderBy('favorite_to_users_count', 'desc')
+            ->status()->approved()
+            ->take(5)->get();
+
+        $pending_posts = $user->posts()->notapproved()->get();
+        return view('backend.author.dashboard', compact('popular_posts', 'pending_posts', 'user') );
+    }
+
     public function edit(){
         $user = Auth::user();
         return view('backend.author.profile', compact('user'));

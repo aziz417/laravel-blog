@@ -45,4 +45,8 @@ class Post extends Model
     {
         return $query->where('is_approved', 1);
     }
+
+    public function scopeNotApproved($query){
+        return $query->where('is_approved', 0);
+    }
 }

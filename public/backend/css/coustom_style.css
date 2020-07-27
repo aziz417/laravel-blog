@@ -8,6 +8,10 @@ html, body{
     border: 0;
     border-top: 1px solid #FEC;
 }
+.cus_btn_size{
+    padding: 6px 14px 6px 14px;
+    font-size: 13px;
+}
 .actionCenter {
     text-align: center;
 }
