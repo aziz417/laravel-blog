@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static status()
  * @method static where(string $string, $id)
+ * @method sum(string $string)
+ * @method NotApproved()
+ * @method withCount(string $string)
  */
 class Post extends Model
 {

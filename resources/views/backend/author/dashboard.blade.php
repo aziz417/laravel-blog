@@ -9,7 +9,7 @@
         <div class="col-lg-3">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <span class="label label-success cus_btn_size">Posts</span>
+                    <span class="label  label-success cus_btn_size">Posts</span>
                 </div>
                 <div class="ibox-content">
                     <h1 class="no-margins">{{ $user->posts->count() }}</h1>

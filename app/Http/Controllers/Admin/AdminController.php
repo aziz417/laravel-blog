@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\Category;
 use App\Model\Post;
+use App\Model\Tag;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,6 +18,46 @@ use Intervention\Image\Facades\Image;
 
 class AdminController extends Controller
 {
+    public function dashboard(){
+        $post = new post();
+        $user = new user();
+        $posts = $post->all();
+        // popular post find
+        $popular_posts = $post->withCount('comments')
+                        ->withCount('favorite_to_users')
+                        ->orderBy('view_count', 'desc')
+                        ->orderBy('comments_count', 'desc')
+                        ->orderBy('favorite_to_users_count', 'desc')
+                        ->take('10')->get();
+
+        //find all pending posts
+        $pending_posts = $post->NotApproved()->get();
+
+        //all posts view count
+        $view_count = $post->sum('view_count');
+
+        // Author count
+        $authors = $user->author()->get();
+
+        // new author within 7 days ago registration
+        $new_authors = $user->author()->whereDate('created_at', '>', Carbon::now()->subDays(7))->count();
+
+        //Popular Authors
+        $popular_authors = $user->author()
+                                ->withCount('comments')
+                                ->withCount('posts')
+                                ->withCount('favorite_posts')
+                                ->orderBy('comments_count', 'desc')
+                                ->orderBy('posts_count', 'desc')
+                                ->orderBy('favorite_posts_count', 'desc')
+                                ->take(10)->get();
+        // category count
+        $categories = Category::all()->count();
+        //tag count
+        $tags = Tag::all()->count();
+
+        return view('backend.admin.dashboard', compact('posts', 'popular_posts', 'pending_posts', 'view_count', 'authors', 'new_authors', 'popular_authors', 'categories', 'tags'));
+    }
     public function edit(){
         $user = Auth::user();
         return view('backend.admin.profile', compact('user'));

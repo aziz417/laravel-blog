@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 /**
  * @method static where(string $string, int $int)
+ * @method author()
  */
 class User extends Authenticatable
 {
@@ -57,5 +58,10 @@ class User extends Authenticatable
 
     public function comments(){
         return $this->hasMany('App\Model\Comment');
+    }
+
+    // find author where user_id = 2
+    public function scopeAuthor($query){
+        return $query->where('role_id', 2);
     }
 }

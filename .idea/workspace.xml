@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/AuthorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/css/coustom_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/css/coustom_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/author/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/author/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -216,7 +216,7 @@
       <workItem from="1595507103464" duration="5471000" />
       <workItem from="1595554965748" duration="9553000" />
       <workItem from="1595640857399" duration="8360000" />
-      <workItem from="1595810081181" duration="3850000" />
+      <workItem from="1595810081181" duration="15404000" />
     </task>
     <task id="LOCAL-00001" summary="post create done">
       <created>1594193483688</created>
@@ -421,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595352540260</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="author dashboard complete">
+      <created>1595848156525</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1595848156525</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="post delete done" />
     <MESSAGE value="some route change&#10;approve change done" />
     <MESSAGE value="some route change" />
     <MESSAGE value="approve done" />
@@ -466,7 +472,8 @@
     <MESSAGE value="author list show and author delete" />
     <MESSAGE value="some problem fix" />
     <MESSAGE value="author profile complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="author profile complete" />
+    <MESSAGE value="author dashboard complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="author dashboard complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="570" y="200" key="#Notifications" timestamp="1594897498841">
@@ -501,10 +508,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1595352563074">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1595848162671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595352563074" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595848162671" />
     <state x="470" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595645931641">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

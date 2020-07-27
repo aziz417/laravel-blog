@@ -43,7 +43,7 @@ Route::get('author/profile/{slug}/{id}', 'HomeController@authorPosts')->name('au
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('dashboard', 'AdminController@dashboard')->name('dashboard');
     Route::resource('tags', 'TagController');
     Route::resource('categories', 'CategoryController');
     Route::resource('posts', 'PostController');
