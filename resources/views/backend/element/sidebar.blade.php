@@ -34,6 +34,12 @@
 
                     <!--admin menu list-->
                     @if(Request::is('admin*'))
+                        <li>
+                            <a href="{{ route('home') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Frontend</span>
+                            </a>
+                        </li>
+
                         <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
                             <a href="{{ route('admin.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
@@ -88,6 +94,12 @@
 
                    <!--author menu list-->
                     @if(Request::is('author*'))
+                        <li>
+                            <a href="{{ route('home') }}">
+                                <i class="fa fa-dashboard"></i> <span class="nav-label">Frontend</span>
+                            </a>
+                        </li>
+
                         <li class="{{ Request::is('author/dashboard') ? 'active' : '' }}">
                             <a href="{{ route('author.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
