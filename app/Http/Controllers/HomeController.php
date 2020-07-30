@@ -67,4 +67,8 @@ class HomeController extends Controller
 
         return view('frontend.page.authorProfile', compact('author', 'posts'));
     }
+
+    public function test(){
+        return view('frontend.test');
+    }
 }

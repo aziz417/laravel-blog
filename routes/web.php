@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('categories', 'HomeController@test')->name('test');
 
 Auth::routes();
 
@@ -93,6 +94,11 @@ Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 
 });
 
 View::composer('frontend/element/footer', function ($view){
+    $categories = App\Model\Category::all();
+    $view->with('categories', $categories);
+});
+
+View::composer('frontend/element/header', function ($view){
     $categories = App\Model\Category::all();
     $view->with('categories', $categories);
 });
