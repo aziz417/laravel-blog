@@ -1,15 +1,15 @@
-<header>
-	<div class="container-fluid position-relative no-side-padding">
+<header id="header">
+	<div id="navbar" class="container-fluid position-relative no-side-padding">
 
-		<a href="{{ route('home') }}" class="logo"><img src="{{ asset('frontend/images/logo.png') }}" alt="Logo Image"></a>
+		<a id="logo" href="{{ route('home') }}" class="logo"><img src="{{ asset('frontend/images/logo.png') }}" alt="Logo Image"></a>
 
 		<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
 		<ul class="main-menu visible-on-click" id="myDIV">
 			<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
 			<li class="{{ Request::is('all*') || Request::is('post*') ? 'active' : '' }}"><a href="{{ route('all.posts') }}">All Posts</a></li>
-            <li class="category_list btn1 {{ Request::is('category*') ? 'active' : '' }}"><a>Categories</a>
-               <div class="category_items">
+            <li onclick="myFunction()" class="category_list {{ Request::is('category*') ? 'active' : '' }}"><a href="javascript:void(0);">Categories</a>
+               <div id="myDIV" class="category_items">
                    <ul>
                        @foreach($categories as $category)
                             <li><a href="{{ route('category.post', [ 'category' => $category->slug, 'id' =>$category->id ] ) }}"><b>{{ $category->name }}</b></a></li>
@@ -18,9 +18,9 @@
                </div>
             </li>
             @if(Auth::check())
-                <li class=""><a href="{{ route('login') }}">Dashboard</a></li>
+                <li><a id="scrol-small" href="{{ route('login') }}">Dashboard</a></li>
                 <li>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById
+                    <a id="scrol-small" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById
                             ('logout-form').submit();">
                     Logout</a>
                     <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none">
@@ -45,16 +45,24 @@
 
 @push('js')
     <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("myDIV");
-        var btns = header.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
+
+        function myFunction() {
+            var element = document.getElementById("myDIV");
+            element.classList.add("mystyle");
+            element.classList.remove("category_items");
         }
+
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("header").style.opacity = "0.8";
+            } else {
+                document.getElementById("header").style.opacity = "1";
+            }
+        }
+
     </script>
 @endpush
 

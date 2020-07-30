@@ -16,9 +16,8 @@
         <!-- Toastr style -->
         <link href="{{ asset('backend/css/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
         <link href="{{ asset('frontend/css/ionicons.css') }}" rel="stylesheet">
-        <link href="{{ asset('frontend/css/custom_style.css') }}" rel="stylesheet">
-
         @stack('css')
+        <link href="{{ asset('frontend/css/custom_style.css') }}" rel="stylesheet">
 
     </head>
 
@@ -46,7 +45,6 @@
         {!! Toastr::message() !!}
 
         @stack('js')
-
     </body>
 
 </html>

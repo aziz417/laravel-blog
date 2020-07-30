@@ -79,7 +79,7 @@
                                                     <i class="ion-heart"></i>{{ $post->favorite_to_users->count() }}</a>
                                             @endguest
                                         </li>
-                                        <li><a href="#"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
+                                        <li><a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
                                         <li><a href="#"><i class="ion-eye"></i>{{ $post->view_count }}</a></li>
                                     </ul>
 

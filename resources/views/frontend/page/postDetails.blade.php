@@ -87,7 +87,7 @@
                                                 <i class="ion-heart"></i>{{ $post->favorite_to_users->count() }}</a>
                                         @endguest
                                     </li>
-                                    <li><a href="#"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
+                                    <li><a href="#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
                                     <li><a href="#"><i class="ion-eye"></i>{{ $post->view_count }}</a></li>
                                 </ul>
 
@@ -127,10 +127,14 @@
                         <div class="card h-100">
                             <div class="single-post post-style-1">
 
-                                <div class="blog-image"><img src="{{ Storage::disk('public')->url('post/').$randomPost->image }}" alt="Blog Image"></div>
+                                <div class="blog-image">
+                                    <a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}">
+                                        <img src="{{ Storage::disk('public')->url('post/').$randomPost->image }}" alt="Blog Image">
+                                    </a>
+                                </div>
 
-                                <a class="avatar" href="#"><img src="{{ Storage::disk('public')->url('profile/').$post->user->image }}" alt="Profile Image"></a>
-
+                                <a class="avatar" href="{{ route('author.profile', ['slug' => Str::slug($post->user->username), 'id' => $post->user->id ]) }}">
+                                    <img src="{{ Storage::disk('public')->url('profile/').$post->user->image }}" alt="Profile Image"></a>
                                 <div class="blog-info">
 
                                     <h4 class="title"><a href="#"><b>{{ $randomPost->title }}</b></a></h4>
@@ -156,7 +160,7 @@
                                                     <i class="ion-heart"></i>{{ $randomPost->favorite_to_users->count() }}</a>
                                             @endguest
                                         </li>
-                                        <li><a href="#"><i class="ion-chatbubble"></i>{{ $randomPost->comments->count() }}</a></li>
+                                        <li><a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
                                         <li><a href="#"><i class="ion-eye"></i>{{ $randomPost->view_count }}</a></li>
                                     </ul>
 
@@ -171,7 +175,7 @@
         </div><!-- container -->
     </section>
 
-    <section class="comment-section center-text">
+    <section class="comment-section center-text" id="comment">
         <div class="container">
             <h4><b>POST COMMENT</b></h4>
             <div class="row">
