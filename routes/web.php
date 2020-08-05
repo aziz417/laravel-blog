@@ -37,7 +37,8 @@ Route::get('category/{category}/{id}/posts', 'HomeController@categoryPosts')->na
 Route::get('tag/{tag}/{id}/posts', 'HomeController@tagPosts')->name('tag.post');
 
 //search post show
-Route::get('search', 'HomeController@search')->name('search');
+Route::GET('auto-complete-posts', 'HomeController@getAutoCompletePosts')->name('auto.complete.posts');
+Route::GET('search', 'HomeController@search')->name('search');
 
 //author profile route here
 Route::get('author/profile/{slug}/{id}', 'HomeController@authorPosts')->name('author.profile');

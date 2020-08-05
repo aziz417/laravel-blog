@@ -70,4 +70,47 @@ header {
     border: 7px solid #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 }
+.autoCompleteResult img{
+    width: 600px!important;
+    height: 550px!important;
+    border-radius: 5px;
+}
+.hidden{
+    display: none!important;
+}
+.autocomplete-result{
+    position: absolute;
+    width: 50%;
+    background: #fff;
+    z-index: 999;
+    float: right!important;
+    padding: 20px;
+    right: 0;
+    top: 60px;
+}
+
+.autocomplete-result {
+    -webkit-box-shadow: 0 20px 30px -16px rgba(9,9,16,.2);
+    -moz-box-shadow: 0 20px 30px -16px rgba(9,9,16,.2);
+    box-shadow: 0 20px 30px -16px rgba(9,9,16,.2);
+    overflow-y: scroll;
+    max-height: 327px;
+}
+.autocomplete-result li{
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+.autocomplete-result li:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.autocomplete-result img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 12px;
+}
 

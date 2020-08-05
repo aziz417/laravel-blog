@@ -35,16 +35,23 @@
 		</ul><!-- main-menu -->
 
 		<div class="src-area">
-			<form action=" {{ route('search') }} " method="get">
+            <form action="{{ route('search') }}" method="get">
+                @csrf
 				<button class="src-btn"  type="submit"><i class="ion-ios-search-strong"></i></button>
-				<input class="src-input" value="{{ isset($key) ? $key: '' }}" name="search" type="text" placeholder="Type of search">
-			</form>
+				<input autocomplete="off" id="search" onkeyup="getSuggestion(this)" class="src-input" value="{{ isset($key) ? $key: '' }}" name="search" type="text" placeholder="Type of search">
+            </form>
 		</div>
 	</div><!-- conatiner -->
 </header>
 
+<div id="show-suggestion" class="autocomplete-result hidden">
+
+</div>
+
 @push('js')
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
 
         function myFunction() {
             var element = document.getElementById("myDIV");
