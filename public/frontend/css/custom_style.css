@@ -113,4 +113,34 @@ header {
     float: left;
     margin-right: 12px;
 }
+.reply-show{
+    display: block;
+}
+.reply-hidden{
+    display: none;
+}
+.reply-section{
+    width: 85%;
+    float: right;
+}
+.reply-left-area img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    float: left;
+}
+.reply_info_body{
+    width: available;
+    background: #DDF;
+    border: 2px solid #CEC;
+    border-radius: 20px;
+    padding: 16px;
+    margin-left: 10px;
+}
+.reply_footer{
+    margin: 5px 0px 0px 10px;
+}
+
+
 

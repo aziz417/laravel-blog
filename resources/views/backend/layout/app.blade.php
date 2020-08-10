@@ -36,8 +36,9 @@
             @include('backend.element.header')
 
             @yield('content')
+            @include('backend.element.footer')
         </div>
-        @include('backend.element.footer')
+
     </div>
 
 

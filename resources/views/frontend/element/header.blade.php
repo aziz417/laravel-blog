@@ -1,7 +1,7 @@
 <header id="header">
 	<div id="navbar" class="container-fluid position-relative no-side-padding">
 
-		<a id="logo" href="{{ route('home') }}" class="logo"><img src="{{ asset('frontend/images/logo.png') }}" alt="Logo Image"></a>
+        <a id="logo" href="{{ route('home') }}" class="logo"><img src="{{ asset('frontend/images/logo.png') }}" alt="Logo Image"></a>
 
 		<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 

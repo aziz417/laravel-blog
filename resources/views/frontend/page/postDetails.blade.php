@@ -223,12 +223,51 @@
                                     </div>
 
                                     <div class="right-area">
-                                        <h5 class="reply-btn" ><a href="#"><b>REPLY</b></a></h5>
+                                        <h5  onclick="replyComment({{ $comment->id }})" class="btn btn-success" ><b>REPLY</b></h5>
                                     </div>
                                 </div><!-- post-info -->
 
                                 <p>{{ $comment->comment }}</p>
+
                             </div>
+
+                            <div class="reply-section">
+                                @if($comment->replies->count() > 0)
+                                    @foreach($comment->replies as $reply)
+                                        <div class="row">
+
+                                            <div class="col-sm-1">
+                                                <a class="avatar reply-left-area" href="#">
+                                                    <img src="{{ Storage::disk('public')->url('profile/').$reply->user->image }}" alt="Profile Image">
+                                                </a>
+                                            </div>
+
+                                            <div class="col-sm-11">
+                                                <div class="reply_info_body">
+                                                    <span><strong>{{ $reply->user->name }} </strong></span>
+                                                    <p>{{ $reply->reply }}</p>
+                                                </div>
+                                                <div class="reply_footer">
+                                                    <span>Like .</span>
+                                                    <span>Reply .</span>
+                                                    <span>{{ $reply->created_at->diffForHumans(null, true, true) }}</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <hr>
+                                    @endforeach
+                                @endif
+                            </div>
+
+                            <div class="reply-hidden" id="reply-{{ $comment->id }}">
+                                <form method="post" action="{{ route('reply.store', $comment->id) }}">
+                                    @csrf
+                                    <input name="reply" type="text">
+                                    <button type="submit">Reply</button>
+                                </form>
+                            </div>
+
                         </div><!-- commnets-area -->
                     @endforeach
                     <a class="more-comment-btn" href="#"><b>VIEW MORE COMMENTS</a>
@@ -259,6 +298,11 @@
                     window.location = "{{ route('login') }}";
                 })
         });
+
+        function replyComment(id){
+            $('#reply-'+id).addClass('reply-show');
+            $('#reply-'+id).removeClass('reply-hidden');
+        }
     </script>
 
 @endpush

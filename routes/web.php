@@ -23,6 +23,7 @@ Route::POST('Subscriber', 'Frontend\SubscriberController@store')->name('subscrib
 Route::group(['middleware' => ['auth']], function (){
     Route::post('favorite/{post}/add', 'Frontend\FavoriteController@add')->name('post.favorite');
     Route::post('comment/{post}/store', 'CommentController@store')->name('comment.store');
+    Route::post('reply/{comment}/store', 'CommentController@replyStore')->name('reply.store');
 });
 
 //post details routes here
@@ -42,6 +43,10 @@ Route::GET('search', 'HomeController@search')->name('search');
 
 //author profile route here
 Route::get('author/profile/{slug}/{id}', 'HomeController@authorPosts')->name('author.profile');
+
+// facebook socialite route here
+/*Route::get('login/google', 'Auth\LoginController@redirectToProvider')->name('google.login');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');*/
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function () {
 
