@@ -87,7 +87,7 @@
                                                 <i class="ion-heart"></i>{{ $post->favorite_to_users->count() }}</a>
                                         @endguest
                                     </li>
-                                    <li><a href="#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
+                                    {{--<li><a href="#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>--}}
                                     <li><a href="#"><i class="ion-eye"></i>{{ $post->view_count }}</a></li>
                                 </ul>
 
@@ -160,7 +160,7 @@
                                                     <i class="ion-heart"></i>{{ $randomPost->favorite_to_users->count() }}</a>
                                             @endguest
                                         </li>
-                                        <li><a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>
+                                        {{--<li><a href="{{ route('post.details', ['id' => $post->id, 'slug' => $post->slug]) }}#comment"><i class="ion-chatbubble"></i>{{ $post->comments->count() }}</a></li>--}}
                                         <li><a href="#"><i class="ion-eye"></i>{{ $randomPost->view_count }}</a></li>
                                     </ul>
 
@@ -203,7 +203,7 @@
                         </form>
                     </div><!-- comment-form -->
 
-                    <h4><b>COMMENTS({{ $post->comments()->count() }})</b></h4>
+                    {{--<h4><b>COMMENTS({{ $post->comments()->count() }})</b></h4>--}}
 
                     @foreach($post->comments as $comment)
 
@@ -227,7 +227,7 @@
                                     </div>
                                 </div><!-- post-info -->
 
-                                <p>{{ $comment->comment }}</p>
+                                <p>{{ $comment->body }}</p>
 
                             </div>
 
@@ -249,7 +249,13 @@
                                                 </div>
                                                 <div class="reply_footer">
                                                     <span>Like .</span>
-                                                    <span>Reply .</span>
+                                                    <span onclick="replyReply({{ $reply->id }})" style="cursor: pointer">Reply .</span>
+                                                    <form class="reply-hidden" id="reply-reply-{{ $reply->id }}" method="post" action="{{ route('reply.store', $comment->id) }}">
+                                                        @csrf
+                                                        <input value="{{ $reply->user->name }}" name="reply" type="text">
+                                                        <input style="display: none" value="{{ $reply->id }}" name="reply_id" type="text">
+                                                        <button type="submit">Reply</button>
+                                                    </form>
                                                     <span>{{ $reply->created_at->diffForHumans(null, true, true) }}</span>
                                                 </div>
                                             </div>
@@ -273,8 +279,6 @@
                     <a class="more-comment-btn" href="#"><b>VIEW MORE COMMENTS</a>
 
                 </div><!-- col-lg-8 col-md-12 -->
-
-
 
             </div><!-- row -->
 
@@ -304,6 +308,11 @@
         function replyComment(id){
             $('#reply-'+id).addClass('reply-show');
             $('#reply-'+id).removeClass('reply-hidden');
+        }
+
+        function replyReply(id){
+            $('#reply-reply-'+id).addClass('reply-show');
+            $('#reply-reply-'+id).removeClass('reply-hidden');
         }
     </script>
 

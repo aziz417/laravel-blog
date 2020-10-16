@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Model\Comment;
 use App\Model\Post;
-use App\Model\Reply;
+use App\Model\Replies;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function GuzzleHttp\Promise\all;
 
 class CommentController extends Controller
 {
@@ -17,9 +18,14 @@ class CommentController extends Controller
         ]);
 
         $request['user_id'] = Auth::id();
-        $request['post_id'] = $id;
+        $request['parent_id'] = 3;
+        $request['mentioned_id'] = 2;
+        $request['commentable_id'] = $id;
+        $request['commentable_type'] = "Comment";
+        $request['body'] = $request->comment;
+        //dd($request->all());
+        $test = Comment::create($request->all());
 
-        Comment::create($request->all());
         Toastr::success('Comment publish successfully', 'Success', ["positionClass" => "toast-top-right"]);
         return redirect()->back();
     }
@@ -31,8 +37,10 @@ class CommentController extends Controller
 
         $request['user_id'] = Auth::id();
         $request['comment_id'] = $id;
+        $request['reply_id'] = $request->reply_id;
 
-        Reply::create($request->all());
+        $t = Replies::create($request->all());
+        //dd($t);
         Toastr::success('Reply publish successfully', 'Success', ["positionClass" => "toast-top-right"]);
         return redirect()->back();
     }

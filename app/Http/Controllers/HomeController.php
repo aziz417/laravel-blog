@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Category;
+use App\Model\Comment;
 use App\Model\Tag;
 use App\User;
 use App\Model\Post;
@@ -12,7 +13,6 @@ use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
-
     public function index()
     {
         //dd(config('customConfig.full_name'));
@@ -25,7 +25,10 @@ class HomeController extends Controller
     public function details($id)
     {
 
-        $post = Post::where('id', $id)->status()->approved()->first();
+        $post = Post::with('comments')->where('id', $id)->status()->approved()->first();
+        /*$comment = Comment::with('replies')->where('id', 1)->first();
+        dd($comment);
+        dd($post->comments()->replies->toArray());*/
 
         $blogKey = 'blog_' . $post->id;
 

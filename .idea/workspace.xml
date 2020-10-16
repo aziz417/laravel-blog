@@ -6,39 +6,16 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="message send to every subscriber when a new post create admin and approve post">
-      <change afterPath="$PROJECT_DIR$/app/Model/Reply.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_10_041559_create_replies_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+    <list default="true" id="abc1312a-cf33-43bc-97b1-115c90a825d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/custom_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/custom_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/element/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/element/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/element/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_18_123422_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_18_123422_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/postDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,464 +23,183 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharConfigPath>$PROJECT_DIR$/laravel-blog/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/vendor/brian2694/laravel-toastr" />
-      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
-      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
-      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
-      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
-      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/intervention/image" />
-      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
-      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/composer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/brian2694/laravel-toastr" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel-blog/vendor/psr/container" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1eMATpzUPkuo96GMHbmxgZSPqM7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1gb37pWLbOxns9G24UmmGjeDFHf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../abdullah/laravel-blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\css\postDetails" />
-      <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\css\profile" />
-      <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\frontend\page" />
-      <recent name="E:\xampp56\htdocs\laravel-blog\public\frontend\css\posts" />
-      <recent name="E:\xampp56\htdocs\laravel-blog\resources\views\backend\author" />
-    </key>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e464b71-4e4f-4cf5-bc49-8daafccf4638" name="Default" comment="" />
-      <created>1594119568819</created>
+      <changelist id="abc1312a-cf33-43bc-97b1-115c90a825d1" name="Default Changelist" comment="" />
+      <created>1598369300316</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594119568819</updated>
-      <workItem from="1594119627929" duration="631000" />
-      <workItem from="1594121170725" duration="437000" />
-      <workItem from="1594122058371" duration="873000" />
-      <workItem from="1594135791267" duration="4211000" />
-      <workItem from="1594172389216" duration="23399000" />
-      <workItem from="1594258544560" duration="3675000" />
-      <workItem from="1594344327434" duration="14675000" />
-      <workItem from="1594436837172" duration="5906000" />
-      <workItem from="1594517910227" duration="23027000" />
-      <workItem from="1594604546766" duration="16098000" />
-      <workItem from="1594649633722" duration="1654000" />
-      <workItem from="1594713550116" duration="589000" />
-      <workItem from="1594738350227" duration="592000" />
-      <workItem from="1594802720755" duration="33832000" />
-      <workItem from="1594897382491" duration="11300000" />
-      <workItem from="1594949559661" duration="26477000" />
-      <workItem from="1595036933038" duration="18478000" />
-      <workItem from="1595119724808" duration="17812000" />
-      <workItem from="1595161882858" duration="12675000" />
-      <workItem from="1595209230892" duration="24895000" />
-      <workItem from="1595297909711" duration="15503000" />
-      <workItem from="1595506463462" duration="183000" />
-      <workItem from="1595507103464" duration="5471000" />
-      <workItem from="1595554965748" duration="9553000" />
-      <workItem from="1595640857399" duration="8360000" />
-      <workItem from="1595810081181" duration="15952000" />
-      <workItem from="1595900874170" duration="1789000" />
-      <workItem from="1595987654294" duration="20762000" />
-      <workItem from="1596068846455" duration="19988000" />
-      <workItem from="1596159276336" duration="5317000" />
-      <workItem from="1596199682972" duration="3869000" />
-      <workItem from="1596429056946" duration="592000" />
-      <workItem from="1596510382242" duration="3826000" />
-      <workItem from="1596594189887" duration="19493000" />
-      <workItem from="1596681678552" duration="14881000" />
-      <workItem from="1596765844505" duration="11571000" />
-      <workItem from="1596958541380" duration="579000" />
-      <workItem from="1597018625980" duration="16185000" />
+      <updated>1598369300316</updated>
+      <workItem from="1598369301792" duration="261000" />
+      <workItem from="1598372983599" duration="382000" />
+      <workItem from="1598373372876" duration="70000" />
+      <workItem from="1598373478568" duration="3320000" />
+      <workItem from="1598407040476" duration="871000" />
+      <workItem from="1598718826940" duration="916000" />
+      <workItem from="1598848704843" duration="803000" />
+      <workItem from="1598851083215" duration="10000" />
+      <workItem from="1601572249643" duration="1280000" />
+      <workItem from="1601978344038" duration="5110000" />
+      <workItem from="1602303295184" duration="75000" />
+      <workItem from="1602640147419" duration="3339000" />
+      <workItem from="1602725339547" duration="608000" />
+      <workItem from="1602726245822" duration="1838000" />
+      <workItem from="1602819296664" duration="15197000" />
+      <workItem from="1602857601561" duration="3796000" />
     </task>
-    <task id="LOCAL-00001" summary="post create done">
-      <created>1594193483688</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1594193483691</updated>
-    </task>
-    <task id="LOCAL-00002" summary="post create done">
-      <created>1594193678849</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1594193678849</updated>
-    </task>
-    <task id="LOCAL-00003" summary="all route change">
-      <created>1594215720302</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1594215720302</updated>
-    </task>
-    <task id="LOCAL-00004" summary="post delete done">
-      <created>1594264963064</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1594264963064</updated>
-    </task>
-    <task id="LOCAL-00005" summary="some route change">
-      <created>1594381865090</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1594381865090</updated>
-    </task>
-    <task id="LOCAL-00006" summary="some route change">
-      <created>1594382006432</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1594382006432</updated>
-    </task>
-    <task id="LOCAL-00007" summary="some route change">
-      <created>1594382017757</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1594382017757</updated>
-    </task>
-    <task id="LOCAL-00008" summary="post parmison done">
-      <created>1594481832762</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1594481832762</updated>
-    </task>
-    <task id="LOCAL-00009" summary="post parmison done">
-      <created>1594483560439</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1594483560439</updated>
-    </task>
-    <task id="LOCAL-00010" summary="subscribe store and view delete done">
-      <created>1594528063430</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1594528063513</updated>
-    </task>
-    <task id="LOCAL-00011" summary="author new post create message send done">
-      <created>1594569956861</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1594569956861</updated>
-    </task>
-    <task id="LOCAL-00012" summary="message send to every subscriber when a new post create admin and approve post">
-      <created>1594577996880</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1594577996880</updated>
-    </task>
-    <task id="LOCAL-00013" summary="favorite post add successfully">
-      <created>1594823970774</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1594823970774</updated>
-    </task>
-    <task id="LOCAL-00014" summary="admin favorite list show view and delete done">
-      <created>1594868213678</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1594868213678</updated>
-    </task>
-    <task id="LOCAL-00015" summary="post details complete">
-      <created>1594917009118</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1594917009142</updated>
-    </task>
-    <task id="LOCAL-00016" summary="admin profile update complete">
-      <created>1594966650636</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1594966650636</updated>
-    </task>
-    <task id="LOCAL-00017" summary="author profile update complete">
-      <created>1594967729023</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1594967729023</updated>
-    </task>
-    <task id="LOCAL-00018" summary="admin and author password change done">
-      <created>1594975857372</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1594975857372</updated>
-    </task>
-    <task id="LOCAL-00019" summary="post view count">
-      <created>1594981622193</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1594981622193</updated>
-    </task>
-    <task id="LOCAL-00020" summary="comment show done">
-      <created>1595093131975</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1595093131975</updated>
-    </task>
-    <task id="LOCAL-00021" summary="show comment by admin complete">
-      <created>1595171284136</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1595171284136</updated>
-    </task>
-    <task id="LOCAL-00022" summary="show comment by author complete">
-      <created>1595171434491</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1595171434491</updated>
-    </task>
-    <task id="LOCAL-00023" summary="post view by category">
-      <created>1595171535321</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1595171535321</updated>
-    </task>
-    <task id="LOCAL-00024" summary="post show by tag">
-      <created>1595171564307</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1595171564307</updated>
-    </task>
-    <task id="LOCAL-00025" summary="some logical problem fix">
-      <created>1595182111257</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1595182111257</updated>
-    </task>
-    <task id="LOCAL-00026" summary="footer category shoe using composer">
-      <created>1595182172421</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1595182172421</updated>
-    </task>
-    <task id="LOCAL-00027" summary="author list show and author delete">
-      <created>1595269494244</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1595269494245</updated>
-    </task>
-    <task id="LOCAL-00028" summary="some problem fix">
-      <created>1595269662554</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1595269662554</updated>
-    </task>
-    <task id="LOCAL-00029" summary="author profile complete">
-      <created>1595352540260</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1595352540260</updated>
-    </task>
-    <task id="LOCAL-00030" summary="author dashboard complete">
-      <created>1595848156525</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1595848156525</updated>
-    </task>
-    <task id="LOCAL-00031" summary="admin dashboard complete">
-      <created>1595869746775</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1595869746775</updated>
-    </task>
-    <task id="LOCAL-00032" summary="frontend dashboard manu add and backend frontend manu add">
-      <created>1595999388261</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1595999388261</updated>
-    </task>
-    <task id="LOCAL-00033" summary="all category show in manu bar">
-      <created>1596111170366</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1596111170366</updated>
-    </task>
-    <task id="LOCAL-00034" summary="menubar active done">
-      <created>1596111268085</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1596111268085</updated>
-    </task>
-    <task id="LOCAL-00035" summary="comment button problem fix">
-      <created>1596127465729</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1596127465729</updated>
-    </task>
-    <task id="LOCAL-00036" summary="live search complete">
-      <created>1596640198436</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1596640198480</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -517,91 +213,26 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="message send to every subscriber when a new post create admin and approve post" />
-    <MESSAGE value="favorite post add successfully" />
-    <MESSAGE value="admin favorite list show view and delete done" />
-    <MESSAGE value="post details complete" />
-    <MESSAGE value="admin profile update complete" />
-    <MESSAGE value="author profile update complete" />
-    <MESSAGE value="admin and author password change done" />
-    <MESSAGE value="post view count" />
-    <MESSAGE value="comment show done" />
-    <MESSAGE value="show comment by admin complete" />
-    <MESSAGE value="show comment by author complete" />
-    <MESSAGE value="post view by category" />
-    <MESSAGE value="post show by tag" />
-    <MESSAGE value="some logical problem fix" />
-    <MESSAGE value="footer category shoe using composer" />
-    <MESSAGE value="author list show and author delete" />
-    <MESSAGE value="some problem fix" />
-    <MESSAGE value="author profile complete" />
-    <MESSAGE value="author dashboard complete" />
-    <MESSAGE value="admin dashboard complete" />
-    <MESSAGE value="frontend dashboard manu add and backend frontend manu add" />
-    <MESSAGE value="all category show in manu bar" />
-    <MESSAGE value="menubar active done" />
-    <MESSAGE value="comment button problem fix" />
-    <MESSAGE value="live search complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="live search complete" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="570" y="200" key="#Notifications" timestamp="1594897498841">
+    <state x="513" y="244" key="#Blade" timestamp="1602857494609">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="570" y="200" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1594897498841" />
-    <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files" timestamp="1594576779009">
+    <state x="513" y="244" key="#Blade/0.0.1366.728@0.0.1366.728" timestamp="1602857494609" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598375425700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="566" y="253" key="#PHP_CS_Fixer_Ignored_Files/0.0.1366.728@0.0.1366.728" timestamp="1594576779009" />
-    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595506579418">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598375425700" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602857594682">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1595506579418" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595138594347">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602857594682" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1598375299889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595138594347" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1596710791086">
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598375299889" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602860094980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1596710791086" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596604665517">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596604665517" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1594481995780">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1594481995780" />
-    <state x="313" y="118" key="MultipleFileMergeDialog" timestamp="1594481997755">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="313" y="118" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1594481997755" />
-    <state x="505" y="71" key="NewPhpClassDialog" timestamp="1594610080597">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="505" y="71" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1594610080597" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1594650035209">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594650035209" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1596640216874">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596640216874" />
-    <state x="470" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595645931641">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="470" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1595645931641" />
-    <state x="0" y="0" width="583" height="728" key="find.popup" timestamp="1594612761635">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1594612761635" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594867393263">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594867393263" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602860094980" />
   </component>
 </project>
